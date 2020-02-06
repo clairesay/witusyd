@@ -791,7 +791,7 @@ main#error-page {
         grid-template-rows: calc(100vh - 90px) calc(100vh - 60px) calc(100vh - 60px) calc(100vh - 60px);
     }
 
-    /* Moving NAV ELEMENTS to overlay */
+    /* Moving NAV ELEMENTS to overlay hey*/
     nav {
          top: 90px;
         height: calc(100vh - 60px);
@@ -881,30 +881,12 @@ main#error-page {
         padding: 0.6em;
     }
 
-/*
-    #menu-items {
-        display: flex;
-        grid-area: none;
-        position: fixed;
-        z-index: 0;
-        left:0;
-        width: 100vw;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-direction: row;
-        box-shadow: 2px 2px 4px #a5a5a5;
-    }
-*/
     #menu-items:focus {
         transition-duration: 0.5s;
         transition-timing-function: ease-in-out;
         transform: scale(1.05);
     }
 
-    /* #menu-items > a {
-        padding: 0.5em 0.5em;
-        text-align: center;
-    } */
 
     #contact > a {
         justify-content: space-between;
@@ -926,17 +908,13 @@ main#error-page {
 /*////////////////// FILTERS FOR ICONS /////////////////////////*/
 
 #fb:hover, #fb:active {
-    /*filter: invert(36%) sepia(70%) saturate(497%) hue-rotate(181deg) brightness(94%) contrast(91%);*/
     fill: #4267B2;
 }
 
 #linkedin:hover, #linkedin:active {
-    /*filter: invert(29%) sepia(72%) saturate(1279%) hue-rotate(290deg) brightness(93%) contrast(96%);*/
-    /*filter: invert(30%) sepia(80%) saturate(5181%) hue-rotate(326deg) brightness(96%) contrast(83%);*/
     fill: #2867B2;
 }
 
 #signup:hover, #signup:active {
-    /*filter: invert(32%) sepia(19%) saturate(4777%) hue-rotate(336deg) brightness(103%) contrast(89%);*/
     fill:#D44638;
 }
