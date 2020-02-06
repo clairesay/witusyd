@@ -27,8 +27,6 @@
     z-index: 1;
     display: flex;
     opacity: 0;
-    /* transform: rotate(45deg);
-    transform: scale(0.5); */
 }
 
 #sign-up-label {
@@ -46,7 +44,6 @@
 }
 
 #sign-up:hover ~ #sign-up-label{
-    /* transform: scale(4); */
     animation-fill-mode: both;
     -webkit-transform: scale(0.8) rotate(45deg);
     opacity: 1;
@@ -54,7 +51,6 @@
 }
 
 #email:hover ~ #email-label{
-    /* transform: scale(4); */
     animation-fill-mode: both;
     -webkit-transform: scale(0.8) rotate(45deg);
     opacity: 1;
@@ -70,7 +66,6 @@
 #text-path-text {
     font-size: 20px;
     font-weight: 600;
-    /* background-color: blue; */
 }
 
 /* End Floating Action Buttons */
@@ -85,25 +80,13 @@ a {
     text-decoration: none;
     color: #000000;
     text-align: center;
-    /* opacity: 0.9; */
-}
-
-#menu-items {
-    /* border: 1px solid #6d4ff8;
-    border-left: none;
-    border-right: none; */
 }
 
 #menu-items > a:hover {
-    /* background-color: white; */
     transform: translateY(0) scale(1);
-    /* -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5)); */
 }
 
-/* #sign-up:hover ~ #sign-up-label{ */
 svg#fb, svg#linkedin, svg#mini-sign-up {
-    /* transform: translateY(0px) scale(1);
-    fill: black; */
     transition-duration: 0.2s;
 }
 
@@ -198,10 +181,6 @@ a#email:hover, a#sign-up:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-header {
-    /* -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5)); */
 }
 
 h4 {
@@ -573,14 +552,9 @@ a.source-link {
 
 /*///////////////////////// Global ////////////////////////*/
 
-.global-article-link-listing {
-    /* padding: 2em 0; */
-}
-
 .global-article-link {
     display: flex;
     flex-direction: row;
-    /* border: 2px solid black; */
     box-shadow: 2px 2px 2px #a5a5a5;
     border-radius: 10px;
     margin: 1em 0;
@@ -589,7 +563,6 @@ a.source-link {
 
 .global-article-link:hover {
     box-shadow: 4px 4px 4px #a5a5a5;
-    /* transform: translateZ(10px); */
     transform: scale(1.001);
 }
 
@@ -671,8 +644,6 @@ main#error-page {
         display: flex;
         opacity: 0;
         -webkit-transform: scale(0.2) rotate(-100deg);
-        /* transform: rotate(45deg);
-        transform: scale(0.5); */
     }
     
     #sign-up-label {
@@ -703,24 +674,6 @@ main#error-page {
         transition-duration: 0.3s;
     }
 
-    /* #sign-up:hover ~ #sign-up-label{
-        transform: scale(4);
-        animation-fill-mode: both;
-        -webkit-transform: scale(0.8) rotate(58deg);
-        opacity: 1;
-        transition-property: transform;
-        transition-duration: 0.3s;
-    }
-
-    #email:hover ~ #email-label{
-        transform: scale(4);
-        animation-fill-mode: both;
-        -webkit-transform: scale(0.8) rotate(54deg);
-        opacity: 1;
-        transition-property: transform;
-        transition-duration: 0.3s;
-    } */
-
     /* Navigation */
     nav {
         grid-template-columns: 2% 0.9fr 0.7fr 0.8fr 1.1fr 1fr 1.3fr 2%;
@@ -739,15 +692,7 @@ main#error-page {
         grid-template-areas: "Landing" "Story1" "Story2" "Story3";
     }
 
-    /* section {
-        margin: 0 1em;
-    } */
-
     /* About Us Profiles */
-
-    /* main#about-us {
-        grid-template-columns: 2% 1fr 2%;
-    } */
 
     #team-profile > * {
         width: 100%;
@@ -772,9 +717,6 @@ main#error-page {
     
 
     /* News & Events  */
-    /* main#news-events-page {
-        grid-template-columns: 2% 1fr 2%;
-    } */
 
     a.source-link {
         width: 100%;
@@ -786,14 +728,6 @@ main#error-page {
     .main-grid {
         grid-template-columns: 2% 1fr 2%;
     }
-
-    /* main#resources-page {
-        grid-template-columns: 2% 1fr 2%;
-    }
-
-    main#error-page {
-        grid-template-columns: 2% 1fr 2%;
-    } */
     
     footer {
         grid-template-columns: 2% 1fr 80px;
@@ -828,16 +762,6 @@ main#error-page {
         grid-template-areas: "LogoContainer" "Nav" "Main" "Footer";
     }
 
-    /* #email {
-        grid-area: Email;
-        position: static;
-    }
-
-    #sign-up {
-        grid-area: SignUp;
-        position: static
-    } */
-
     #logo-container {
         grid-area: LogoContainer;
         position: sticky;
@@ -869,17 +793,12 @@ main#error-page {
 
     /* Moving NAV ELEMENTS to overlay */
     nav {
-        /* grid-area: Nav; */
-        /*position: fixed;
-        top: 90px;
-        width: 100vw;
- */     top: 90px;
+         top: 90px;
         height: calc(100vh - 60px);
         width: 200px;
         left: calc(100vw - 200px);
         display: flex;
         flex-direction: column;
-        /* grid-template-columns: 2% 0.9fr 0.7fr 0.8fr 1.1fr 1fr 1.3fr 2%; */
         justify-content: flex-start;
         z-index: 4;
     }
