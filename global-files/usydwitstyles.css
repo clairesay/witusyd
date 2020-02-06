@@ -1,0 +1,1023 @@
+* {
+    font-family: 'Muli', sans-serif;
+    margin: 0;
+}
+
+/* Load Bar for Menu Items */
+.load-bar {
+    transition-duration: 0.2s;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    background-color: #6d4ff8;
+    margin-top: 0;
+}
+
+/* a#about:hover */
+#menu-items a:hover > .load-bar {
+    margin-top: 0.2em;
+    height: 2px;
+    transform: scaleX(1.1);
+}
+
+/* Floating Action Buttons  */
+
+.round-label {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    opacity: 0;
+    /* transform: rotate(45deg);
+    transform: scale(0.5); */
+}
+
+#sign-up-label {
+    bottom: 120px;
+    right: -45px;
+    transition-duration: 0.3s;
+    -webkit-transform: scale(0.2) rotate(-100deg);
+}
+
+#email-label {
+    bottom: 30px;
+    right: -45px;
+    transition-duration: 0.3s;
+    -webkit-transform: scale(0.2) rotate(-100deg);
+}
+
+#sign-up:hover ~ #sign-up-label{
+    /* transform: scale(4); */
+    animation-fill-mode: both;
+    -webkit-transform: scale(0.8) rotate(45deg);
+    opacity: 1;
+    transition-property: transform;
+}
+
+#email:hover ~ #email-label{
+    /* transform: scale(4); */
+    animation-fill-mode: both;
+    -webkit-transform: scale(0.8) rotate(45deg);
+    opacity: 1;
+    transition-property: transform;
+    transition-duration: 0.3s;
+}
+
+#curve {
+    transform: translate(30px, 30px);
+    fill: none;
+}
+
+#text-path-text {
+    font-size: 20px;
+    font-weight: 600;
+    /* background-color: blue; */
+}
+
+/* End Floating Action Buttons */
+
+h1 {
+    font-size: 36px;
+    justify-self: flex-start;
+    padding: 1em 0 0.5em 0;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    text-align: center;
+    /* opacity: 0.9; */
+}
+
+#menu-items {
+    /* border: 1px solid #6d4ff8;
+    border-left: none;
+    border-right: none; */
+}
+
+#menu-items > a:hover {
+    /* background-color: white; */
+    transform: translateY(0) scale(1);
+    /* -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5)); */
+}
+
+/* #sign-up:hover ~ #sign-up-label{ */
+svg#fb, svg#linkedin, svg#mini-sign-up {
+    /* transform: translateY(0px) scale(1);
+    fill: black; */
+    transition-duration: 0.2s;
+}
+
+a#fb-link:hover > svg#fb {
+    transform: translateY(0px) scale(1.1);
+    fill: #4267B2;
+}
+
+a#linkedin-link:hover > svg#linkedin {
+    transform: translateY(0px) scale(1.1);
+    fill: #2867B2;
+}
+
+a#mini-sign-up-link:hover > svg#mini-sign-up {
+    transform: translateY(0px) scale(1.1);
+    fill:#6d4ff8;
+}
+
+strong {
+    font-weight: 800;
+    color: #6d4ff8;
+}
+
+
+/* ///////////// SCROLL BAR STUFF ///////////// */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+  /* hiding the event card slider */
+ #event-sliders::-webkit-scrollbar {
+    height: 0;
+  }
+  
+/* /////////// SCROLL BAR STUFF END /////////// */
+
+/* Contact via Email  */
+#email {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 2;
+    -webkit-filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.5));
+    transition-duration: 0.2s;
+}
+
+/* Sign Up */
+
+#sign-up {
+    position: fixed;
+    bottom: 120px;
+    right: 30px;
+    z-index: 2;
+    -webkit-filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.5));
+    transition-duration: 0.2s;
+}
+
+a#email:hover, a#sign-up:hover {
+    transform: translateY(-2px) scale(1.01);
+}
+
+#sign-up-form-page {
+    grid-template-rows: auto;
+    grid-template-areas: ". SignUpForm .";
+    display: flex;
+    justify-content: space-around;
+}
+
+#sign-up-form {
+    grid-area: SignUpForm;
+    padding: 1em 0;
+}
+
+/* Header */
+#home-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    /* -webkit-filter: drop-shadow(0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5)); */
+}
+
+h4 {
+    padding: 1em 0;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: space-around;
+    z-index: 3;
+    grid-area: LogoContainer;
+}
+
+#wit-logo {
+    object-fit: contain;
+    padding: 30px 0 0 0;
+    max-height: 60px;
+    -webkit-filter: drop-shadow(1px 2px 3px #6e4ff856);
+}
+
+#footer-logo {
+    object-fit: contain;
+    max-height: 60px;
+}
+
+nav > a {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Classes for the mobile menu */
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
+    grid-area: MobileMenu;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+    right: 0;
+}
+
+/* Home */
+#home {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 140px 60px 1fr 150px;
+    grid-template-areas: "LogoContainer" "Nav" "Main" "Footer"
+}
+
+/* Navigation */
+
+nav {
+    grid-area: Nav;
+    display: grid;
+    grid-template-columns: 10% 0.8fr 0.7fr 1.1fr 0.9fr 0.8fr 0.6fr 10%;
+    grid-template-rows: 1fr;
+    grid-template-areas: ". About Careers NewsEvents Newsletters Resources Contact .";
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+}
+
+.shadow-active {
+    box-shadow: 0px 3px 3px #aaaaaa;
+}
+
+.shadow-inactive {
+    box-shadow: 0px 0px 0px white;
+}
+
+nav > * {
+    margin: auto;
+}
+
+#about {
+    grid-area: About;
+}
+
+#careers {
+    grid-area: Careers;
+}
+
+#news-events {
+    grid-area: NewsEvents;
+}
+
+#newsletters {
+    grid-area: Newsletters
+}
+
+#resources {
+    grid-area: Resources;
+}
+
+#contact {
+    grid-area: Contact;
+    display: flex;
+}
+
+#contact > * {
+    padding: 0.6em;
+    width: 28px;
+}
+
+
+/*/////////////// Main Content All ///////////////////*/
+main {
+    grid-area: Main;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: auto;
+}
+
+/* Main Content Landing*/
+
+main#half-width {
+    grid-template-rows: calc(100vh - 150px) calc(100vh - 60px) calc(100vh - 60px) calc(100vh - 60px);
+    grid-template-areas: ". Landing ." ". Story1 ." ". Story2 ." ". Story3 .";
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;  
+}
+
+main#half-width> * {
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "Left Right";
+}
+
+/* Common Page Divided Articles */
+.left {
+    grid-area: Left;
+    margin: auto;
+}
+
+.right {
+    grid-area: Right;
+    margin: auto;
+}
+
+
+
+/* About Us Page */
+
+main#about-us-page {
+    grid-template-rows: auto auto auto;
+    grid-template-areas: ". Blurb ." ". TeamProfile ." ". Sponsors .";
+}
+
+#blurb {
+    grid-area: Blurb;
+}
+
+#team-profile {
+    grid-area: TeamProfile;
+}
+
+#sponsors {
+    grid-area: Sponsors;
+}
+
+/* Sections */
+#landing {
+    grid-area: Landing;
+}
+
+#story1 {
+    grid-area: Story1;
+}
+
+#story2 {
+    grid-area: Story2;
+}
+
+#story3 {
+    grid-area: Story3;
+}
+
+/* Footer */
+footer {
+    background-color: #6d4ff8;
+    color: white;
+    display: grid;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-areas: ". FooterContent. ";
+    margin-top: 30px;
+}
+
+#footer-content {
+    grid-area: FooterContent;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#footer-content > h2 {
+    text-align: center;
+    max-width: 33vw;
+    font-size: 20px;
+}
+
+
+/*SIGN-UP*/
+.external-application {
+    display: flex;
+    justify-content: space-around;
+}
+
+.external-application > iframe {
+    padding: 3em 0;
+}
+
+/* About Us Profiles */
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile-picture {
+    width: 10vw;
+    padding-right: 1em;
+}
+
+#team-profile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#team-profile > * {
+    width: 42%;
+}
+
+#team-profile > h1 {
+    width: 50%
+}
+
+.break {
+    flex-basis: 100%;
+    height: 30px;
+}
+
+h3 > p {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+h3 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Article/Resource Pages */
+
+#news-article-1-page {
+    grid-template-rows: auto;
+    grid-template-areas: ". Article ." ". Related .";
+}
+
+#full-article {
+    grid-area: Article;
+}
+
+#related-articles {
+    grid-area: Related;
+    display: flex;
+    justify-content: space-between;
+}
+
+#related-articles > article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-around;
+    width: 30vw;
+}
+
+#related-articles > article >img {
+    width: 20vw;
+    height: 15vw;
+    padding: 1em;
+}
+
+#related-articles > article > * {
+    text-align: center;
+}
+
+
+/*/////////////////////// News & Events ////////////////////*/
+
+main#news-events-page {
+    grid-template-rows: auto auto;
+    grid-template-areas: ". EventSliders ." ". News .";
+}
+
+/* Events Sliding Cards */
+
+#events {
+    grid-area: EventSliders;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#event-sliders {
+    width: 100%;
+    height: 260px;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;  
+}
+
+.event-card {
+    width: 500px;
+    height: 250px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    scroll-behavior: smooth;
+    padding: 0 1em;
+}
+
+#last-event {
+    padding-left: 3em;
+}
+
+#future-event3 {
+    padding-right: 3em;
+}
+
+/*/////////////////////////////////// News Stuff //////////////////////////////*/
+
+#news-article-link-listing {
+    grid-area: News;
+}
+
+.news-article-image {
+    height: 120px;
+    width: 200px;
+    padding: 1em;
+}   
+
+a.source-link > p {
+    font-weight: 400;
+    font-size: 16px;
+}
+
+a.source-link {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    font-weight: 700;
+    font-size: 24px;
+    width: 75%;
+}
+
+
+/*///////////////////////// Global ////////////////////////*/
+
+.global-article-link-listing {
+    /* padding: 2em 0; */
+}
+
+.global-article-link {
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid black; */
+    box-shadow: 2px 2px 2px #a5a5a5;
+    border-radius: 10px;
+    margin: 1em 0;
+    transition-duration: 0.2s;
+}
+
+.global-article-link:hover {
+    box-shadow: 4px 4px 4px #a5a5a5;
+    /* transform: translateZ(10px); */
+    transform: scale(1.001);
+}
+
+
+/*///////////////////////// Careers ///////////////////////*/
+main#careers-page {
+    grid-template-areas: ". Careers .";
+}
+
+#careers-article-link-listing {
+    grid-area: Careers;
+}
+
+.careers-article-image {
+    width: 15vw;
+    padding: 1em 1em;
+}   
+
+/*/////////////////////////// Resources /////////////////////*/
+main#resources-page {
+    grid-template-areas: ". Resources .";
+}
+
+#resources-article-link-listing {
+    grid-area: Resources;
+}
+
+.resource {
+    padding: 1em;
+}
+
+/*//////////////////////////// 404 Error /////////////////////*/
+
+main#error-page {
+    grid-template-areas: ". Error .";
+}
+
+#error-message {
+    grid-area: Error;
+}
+
+
+/*/////////////////////////////////////////////////////// MEDIA QUERIES START HERE /////////////////////////////////////////////////////*/
+
+@media only screen and (max-width: 850px) {
+
+        /* ANIMATED BAR */
+
+        #menu-items a:hover > .load-bar {
+            margin-top: 0.2em;
+            height: 2px;
+            transform: scaleX(1);
+        }
+
+    /* Social media contacts */
+    #contact > * {
+        padding: 0.8em;
+        width: 22px;
+    }
+
+    /* Floating action buttons contact via Email and sign up  */
+    #email {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #sign-up {
+        bottom: 105px;
+        right: 20px;
+    }
+
+    #text-path-text {
+        font-size: 16px;
+    }
+
+    .round-label {
+        position: fixed;
+        z-index: 1;
+        display: flex;
+        opacity: 0;
+        -webkit-transform: scale(0.2) rotate(-100deg);
+        /* transform: rotate(45deg);
+        transform: scale(0.5); */
+    }
+    
+    #sign-up-label {
+        bottom: 100px;
+        right: -60px;
+    }
+    
+    #email-label {
+        bottom: 17px;
+        right: -60px;
+    }
+
+    #sign-up:hover ~ #sign-up-label{
+        transform: scale(0);
+        animation-fill-mode: both;
+        -webkit-transform: scale(0) rotate(0deg);
+        opacity: 1;
+        transition-property: transform;
+        transition-duration: 0.3s;
+    }
+
+    #email:hover ~ #email-label{
+        transform: scale(0);
+        animation-fill-mode: both;
+        -webkit-transform: scale(0) rotate(0deg);
+        opacity: 1;
+        transition-property: transform;
+        transition-duration: 0.3s;
+    }
+
+    /* #sign-up:hover ~ #sign-up-label{
+        transform: scale(4);
+        animation-fill-mode: both;
+        -webkit-transform: scale(0.8) rotate(58deg);
+        opacity: 1;
+        transition-property: transform;
+        transition-duration: 0.3s;
+    }
+
+    #email:hover ~ #email-label{
+        transform: scale(4);
+        animation-fill-mode: both;
+        -webkit-transform: scale(0.8) rotate(54deg);
+        opacity: 1;
+        transition-property: transform;
+        transition-duration: 0.3s;
+    } */
+
+    /* Navigation */
+    nav {
+        grid-template-columns: 2% 0.9fr 0.7fr 0.8fr 1.1fr 1fr 1.3fr 2%;
+    }
+
+    /* Main in general */
+    main {
+        grid-template-columns: 0 1fr 0;
+        grid-template-areas: ". Landing .";
+    }
+
+    /* Main Landing */
+    main#half-width {
+        grid-template-columns: 1fr;
+        grid-template-rows: calc(100vh - 150px) calc(100vh - 60px) calc(100vh - 60px) calc(100vh - 60px);
+        grid-template-areas: "Landing" "Story1" "Story2" "Story3";
+    }
+
+    /* section {
+        margin: 0 1em;
+    } */
+
+    /* About Us Profiles */
+
+    /* main#about-us {
+        grid-template-columns: 2% 1fr 2%;
+    } */
+
+    #team-profile > * {
+        width: 100%;
+    }
+
+    .profile {
+        padding-bottom: 1em;
+    }
+
+    .profile-picture {
+        width: 15vw;
+        padding-right: 1em;
+    }
+
+    .break {
+        height: 1px;
+    }
+
+    #team-profile > h1 {
+        width: 100%;
+    }
+    
+
+    /* News & Events  */
+    /* main#news-events-page {
+        grid-template-columns: 2% 1fr 2%;
+    } */
+
+    a.source-link {
+        width: 100%;
+        padding-right: 0.5em;
+    }
+
+    /* Careers */
+    /* main#about-us-page, main#news-events-page, main#careers-page, main#resources-page, main#error-page  */
+    .main-grid {
+        grid-template-columns: 2% 1fr 2%;
+    }
+
+    /* main#resources-page {
+        grid-template-columns: 2% 1fr 2%;
+    }
+
+    main#error-page {
+        grid-template-columns: 2% 1fr 2%;
+    } */
+    
+    footer {
+        grid-template-columns: 2% 1fr 80px;
+    }
+
+    h2#society-title {
+        font-size: 18px;
+    }
+
+}
+
+
+@media only screen and (max-width: 650px) {
+
+    /* ANIMATED BAR */
+
+    .load-bar {
+        margin-top: 0.2em;
+        transform-origin: center right;
+    }
+
+    #menu-items a:hover > .load-bar {
+        margin-top: 0.2em;
+        height: 2px;
+        transform: scaleX(1.1);
+        transform-origin: center right;
+    }
+
+    /* MAIN STRUCTURE */
+    #home {
+        grid-template-rows: 140px 0 1fr 150px;
+        grid-template-areas: "LogoContainer" "Nav" "Main" "Footer";
+    }
+
+    /* #email {
+        grid-area: Email;
+        position: static;
+    }
+
+    #sign-up {
+        grid-area: SignUp;
+        position: static
+    } */
+
+    #logo-container {
+        grid-area: LogoContainer;
+        position: sticky;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "HomeLink MobileMenu";
+        background: #ffffff;
+    }
+
+    #wit-logo {
+        padding: 20px 0 0 20px;
+        width: 175px;
+        display: flex;
+        justify-self: flex-start;
+    }
+
+    #mobile-menu-button {
+        display: flex;
+        justify-self: flex-end;
+        margin: auto 30px;
+    }
+
+    /*homepage only*/
+    main#half-width {
+        grid-template-rows: calc(100vh - 90px) calc(100vh - 60px) calc(100vh - 60px) calc(100vh - 60px);
+    }
+
+    /* Moving NAV ELEMENTS to overlay */
+    nav {
+        /* grid-area: Nav; */
+        /*position: fixed;
+        top: 90px;
+        width: 100vw;
+ */     top: 90px;
+        height: calc(100vh - 60px);
+        width: 200px;
+        left: calc(100vw - 200px);
+        display: flex;
+        flex-direction: column;
+        /* grid-template-columns: 2% 0.9fr 0.7fr 0.8fr 1.1fr 1fr 1.3fr 2%; */
+        justify-content: flex-start;
+        z-index: 4;
+    }
+
+    nav > * {
+        margin: 25px 30px 25px auto
+    }
+
+    #contact {
+        margin-right: 20px;
+    }
+
+    /*TESTING UP DOWN*/
+    main#half-width> * {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "Left" "Right";
+    }
+    
+    /* Common Page Divided Articles */
+    .left {
+        grid-area: Left;
+        margin: auto;
+    }
+    
+    .right {
+        grid-area: Right;
+        margin: auto;
+    }
+
+    /* About Us Profiles */
+
+    #team-profile {
+        justify-content: space-between;
+    }
+
+    .profile-picture {
+        width: 20vw;
+        padding-right: 1em;
+    }
+
+    #team-profile > * {
+        width: 95%;
+    }
+
+    .break {
+        height: 0px;
+    }
+
+
+    /* FOOTER */
+    h2#society-title {
+        text-align: left;
+        font-size: 16px;
+    }
+
+    #related-articles {
+        flex-direction: column;
+    }
+
+    #related-articles > article {
+        flex-direction: row;
+        width: 100vw;
+    }
+    
+    #related-articles > article >img {
+    }
+    
+    #related-articles > article > * {
+        text-align: left;
+    }
+    
+
+}
+
+@media only screen and (max-width: 425px) {
+
+    
+    #contact > * {
+        padding: 0.6em;
+    }
+
+/*
+    #menu-items {
+        display: flex;
+        grid-area: none;
+        position: fixed;
+        z-index: 0;
+        left:0;
+        width: 100vw;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+        box-shadow: 2px 2px 4px #a5a5a5;
+    }
+*/
+    #menu-items:focus {
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+        transform: scale(1.05);
+    }
+
+    /* #menu-items > a {
+        padding: 0.5em 0.5em;
+        text-align: center;
+    } */
+
+    #contact > a {
+        justify-content: space-between;
+    }
+
+    main {
+        grid-template-columns: 0 1fr 0;
+    }
+
+    /* About Us Profiles */
+
+    #team-profile > * {
+        width: 100%;
+    }
+    
+}
+
+
+/*////////////////// FILTERS FOR ICONS /////////////////////////*/
+
+#fb:hover, #fb:active {
+    /*filter: invert(36%) sepia(70%) saturate(497%) hue-rotate(181deg) brightness(94%) contrast(91%);*/
+    fill: #4267B2;
+}
+
+#linkedin:hover, #linkedin:active {
+    /*filter: invert(29%) sepia(72%) saturate(1279%) hue-rotate(290deg) brightness(93%) contrast(96%);*/
+    /*filter: invert(30%) sepia(80%) saturate(5181%) hue-rotate(326deg) brightness(96%) contrast(83%);*/
+    fill: #2867B2;
+}
+
+#signup:hover, #signup:active {
+    /*filter: invert(32%) sepia(19%) saturate(4777%) hue-rotate(336deg) brightness(103%) contrast(89%);*/
+    fill:#D44638;
+}
