@@ -464,8 +464,8 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: space-around;
-    width: 30vw;
+    align-items: center;
+    width: 24vw;
 }
 
 #related-articles > article >img {
@@ -496,17 +496,23 @@ main#news-events-page {
     align-items: center;
 }
 
+#events > h1 {
+    align-self: flex-start;
+    padding: 0.5em 0;
+}
+
 #event-sliders {
     width: 100%;
-    height: 260px;
+    height: auto;
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;  
 }
 
 .event-card {
-    width: 500px;
-    height: 250px;
+    width: 40vw;
+    /* Change this height to auto when we have a defined size for our event cards */
+    height: 20vw;
     flex-shrink: 0;
     scroll-snap-align: start;
     scroll-behavior: smooth;
@@ -608,6 +614,18 @@ main#error-page {
 /*/////////////////////////////////////////////////////// MEDIA QUERIES START HERE /////////////////////////////////////////////////////*/
 
 @media only screen and (max-width: 850px) {
+
+    h1 {
+        margin-left: 3vw;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    #about-us-page h1 {
+        margin-left: 0;
+        /* padding-bottom: 0;
+        padding-top: 10px; */
+    }
 
         /* ANIMATED BAR */
 
@@ -731,10 +749,15 @@ main#error-page {
     
     footer {
         grid-template-columns: 2% 1fr 80px;
+        margin-top: 0;
     }
 
     h2#society-title {
         font-size: 18px;
+    }
+
+    #related-articles > article {
+        width: 30vw;
     }
 
 }
@@ -758,7 +781,7 @@ main#error-page {
 
     /* MAIN STRUCTURE */
     #home {
-        grid-template-rows: 140px 0 1fr 150px;
+        grid-template-rows: 100px 0 1fr 150px;
         grid-template-areas: "LogoContainer" "Nav" "Main" "Footer";
     }
 
@@ -767,14 +790,18 @@ main#error-page {
         position: sticky;
         top: 0;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 90px;
         grid-template-rows: 1fr;
         grid-template-areas: "HomeLink MobileMenu";
         background: #ffffff;
     }
 
+    h4 {
+        padding: 0 0 0 2em;
+    }
+
     #wit-logo {
-        padding: 20px 0 0 20px;
+        padding: 0px 0 0 20px;
         width: 175px;
         display: flex;
         justify-self: flex-start;
@@ -782,7 +809,7 @@ main#error-page {
 
     #mobile-menu-button {
         display: flex;
-        justify-self: flex-end;
+        justify-self: center;
         margin: auto 30px;
     }
 
@@ -791,16 +818,28 @@ main#error-page {
         grid-template-rows: calc(100vh - 90px) calc(100vh - 60px) calc(100vh - 60px) calc(100vh - 60px);
     }
 
+    #home-link {
+        /* display: flex; */
+        flex-direction: row;
+        align-items: space-around;
+        justify-content: center;
+    }
+
+    #home-link > * {
+        text-align: left;
+    }
+
     /* Moving NAV ELEMENTS to overlay hey*/
     nav {
          top: 90px;
-        height: calc(100vh - 60px);
+        height: calc(100vh - 100px);
         width: 200px;
         left: calc(100vw - 200px);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         z-index: 4;
+        box-shadow: -10px 3px 5px rgba(0,0,0,0.5);
     }
 
     nav > * {
@@ -900,6 +939,12 @@ main#error-page {
 
     #team-profile > * {
         width: 100%;
+    }
+
+
+    h4 {
+        font-size: 13px;
+        /* padding-left: 0.5em; */
     }
     
 }

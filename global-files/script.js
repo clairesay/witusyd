@@ -140,12 +140,40 @@ mobileMenuButton.addEventListener('click', function displayMenu() {
         // }
     // })
 
-for (let i = 0; i < 5; i ++) {
-    document.getElementsByClassName('slide-link')[i].addEventListener('click', function scrollLevel() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    })
-}
 
+
+
+///RESTORE THIS BECAUSE IT IS STILL NEEDEDDDD
+
+
+// for (let i = 0; i < 5; i ++) {
+//     document.getElementsByClassName('slide-link')[i].addEventListener('click', function scrollLevel() {
+//         window.scrollTo({
+//             top: 0,
+//             behavior: 'smooth'
+//         });
+//     })
+// }
+
+
+
+
+
+
+
+document.getElementById('event-card-select').addEventListener('click', function eventCardSelect() {
+    if (document.getElementById('1').checked) {
+        console.log('heyyyyy');
+        document.getElementById('event-sliders').scrollTo
+    } else if (document.getElementById('2').checked){
+
+    } else if (document.getElementById('3').checked) {
+
+    } else if (document.getElementById('4').checked) {
+
+    } else if (document.getElementById('5').checked) {
+
+    } else {
+
+    }
+})
