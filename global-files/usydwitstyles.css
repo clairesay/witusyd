@@ -187,6 +187,10 @@ h4 {
     padding: 1em 0;
 }
 
+#blurb h4 {
+    padding: 0;
+}
+
 #logo-container {
     display: flex;
     justify-content: space-around;
@@ -506,18 +510,52 @@ main#news-events-page {
     height: auto;
     display: flex;
     overflow-x: auto;
-    scroll-snap-type: x mandatory;  
+    scroll-snap-type: x mandatory; 
 }
 
 .event-card {
-    width: 400px;
+    width: 500px;
     /* Change this height to auto when we have a defined size for our event cards */
-    height: 200px;
+    height: 250px;
     flex-shrink: 0;
     scroll-snap-align: start;
     scroll-behavior: smooth;
     padding: 0 1em;
 }
+
+#last-event.event-card {
+    scroll-snap-align: end; 
+}
+
+#event-card-select {
+    padding: 1em;
+}
+
+#event-card-select input {
+    opacity: 0;
+    width: 40px;
+
+    /* height: 100px; */
+}
+
+input:checked > .radio-mark {
+    /* background-color: tra; */
+    background-color: #6d4ff8;
+}
+
+.radio-mark {
+    background-color: #aaaaaa;
+    margin: 0 0.5em;
+    transition-duration: 0.2s;
+    /* height: 0.2px; */
+    /* transform: scale(0.5); */
+}
+
+.radio-mark:hover {
+    background-color: #6d4ff8;
+}
+
+
 
 #last-event {
     padding-left: 3em;
@@ -552,7 +590,8 @@ a.source-link {
 
     font-weight: 700;
     font-size: 24px;
-    width: 75%;
+    width: 100%;
+    padding-right: 0.5em;
 }
 
 
@@ -613,6 +652,12 @@ main#error-page {
 
 #error-message {
     grid-area: Error;
+}
+
+
+
+#newsletters-page {
+    height: calc(100vh - 350px);
 }
 
 
@@ -742,19 +787,19 @@ main#error-page {
     /* News & Events  */
 
     a.source-link {
-        width: 100%;
+        width: 80%;
         padding-right: 0.5em;
     }
 
     /* Careers */
     /* main#about-us-page, main#news-events-page, main#careers-page, main#resources-page, main#error-page  */
     .main-grid {
-        grid-template-columns: 2% 1fr 2%;
+        grid-template-columns: 5% 1fr 5%;
     }
     
     footer {
-        grid-template-columns: 2% 1fr 80px;
-        margin-top: 0;
+        grid-template-columns: 5% 1fr 100px;
+        /* margin-top: 0; */
     }
 
     h2#society-title {
@@ -769,6 +814,12 @@ main#error-page {
 
 
 @media only screen and (max-width: 650px) {
+
+
+    #newsletters-page {
+        height: calc(100vh - 250px);
+    }
+    
 
     /* ANIMATED BAR */
 
@@ -844,7 +895,7 @@ main#error-page {
         flex-direction: column;
         justify-content: flex-start;
         z-index: 4;
-        box-shadow: -10px 3px 5px rgba(0,0,0,0.5);
+        /* box-shadow: -10px 3px 5px rgba(0,0,0,0.5); */
     }
 
     nav > * {
@@ -917,10 +968,11 @@ main#error-page {
 
 
     .event-card {
+        width: 400px;
         /* Change this height to auto when we have a defined size for our event cards */
+        height: 200px;
         padding: 0 0.5em;
     }
-
 
     #last-event {
         padding-left: 2em;
@@ -940,7 +992,25 @@ main#error-page {
 
 @media only screen and (max-width: 425px) {
 
-    
+    #news-article-link-listing article.global-article-link {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #news-article-link-listing a.source-link {
+        /* text-align: center; */
+        /* padding: 1em 4em; */
+        margin: 0 1em 1em 1em;
+        /* margin-: 2em; */
+    }
+
+    .news-article-image {
+        height: 180px;
+        width: 300px;
+        padding: 1em;
+    }   
+
     #contact > * {
         padding: 0.6em;
     }
