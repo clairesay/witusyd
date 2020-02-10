@@ -510,9 +510,9 @@ main#news-events-page {
 }
 
 .event-card {
-    width: 40vw;
+    width: 400px;
     /* Change this height to auto when we have a defined size for our event cards */
-    height: 20vw;
+    height: 200px;
     flex-shrink: 0;
     scroll-snap-align: start;
     scroll-behavior: smooth;
@@ -566,6 +566,11 @@ a.source-link {
     margin: 1em 0;
     transition-duration: 0.2s;
 }
+
+.global-article-link:first-of-type {
+    margin-top: 0;
+}
+
 
 .global-article-link:hover {
     box-shadow: 4px 4px 4px #a5a5a5;
@@ -909,7 +914,27 @@ main#error-page {
     #related-articles > article > * {
         text-align: left;
     }
+
+
+    .event-card {
+        /* Change this height to auto when we have a defined size for our event cards */
+        padding: 0 0.5em;
+    }
+
+
+    #last-event {
+        padding-left: 2em;
+    }
     
+    #future-event3 {
+        padding-right: 2em;
+    }
+    
+
+    #sign-up-form {
+        width: 90vw;
+        height: 1630px;
+    }
 
 }
 

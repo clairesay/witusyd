@@ -158,22 +158,61 @@ mobileMenuButton.addEventListener('click', function displayMenu() {
 
 
 
-
+let skip = window.width*0.9;
 
 
 document.getElementById('event-card-select').addEventListener('click', function eventCardSelect() {
     if (document.getElementById('1').checked) {
         console.log('heyyyyy');
-        document.getElementById('event-sliders').scrollTo
+        document.getElementById('event-sliders').scrollTo({
+            top: 100,
+            left: 0,
+            behavior: 'smooth'
+          });
     } else if (document.getElementById('2').checked){
-
+        document.getElementById('event-sliders').scrollTo({
+            top: 100,
+            left: 400,
+            behavior: 'smooth'
+          });
     } else if (document.getElementById('3').checked) {
-
+        document.getElementById('event-sliders').scrollTo({
+            top: 100,
+            left: 800,
+            behavior: 'smooth'
+          });
     } else if (document.getElementById('4').checked) {
-
+        document.getElementById('event-sliders').scrollTo({
+            top: 100,
+            left: 1200,
+            behavior: 'smooth'
+          });
     } else if (document.getElementById('5').checked) {
-
+        document.getElementById('event-sliders').scrollTo({
+            top: 100,
+            left: 1600,
+            behavior: 'smooth'
+          });
     } else {
 
     }
 })
+
+document.getElementById('event-sliders').addEventListener('scroll', function eventSliderLink() {
+    if (document.getElementById('event-sliders').scrollLeft < 400) {
+        document.getElementById('1').checked = true;
+        console.log('hehe');
+    } else if (document.getElementById('event-sliders').scrollLeft < 800) {
+        document.getElementById('2').checked = true;
+        console.log('hehe');
+    } else if (document.getElementById('event-sliders').scrollLeft < 1200) {
+        document.getElementById('3').checked = true;
+        console.log('hehe');
+    } else if (document.getElementById('event-sliders').scrollLeft < 1400) {
+        document.getElementById('4').checked = true;
+        console.log('hehe');
+    } else if (document.getElementById('event-sliders').scrollLeft < 1600) {
+        document.getElementById('5').checked = true;
+        console.log('hehe');
+    };
+});
