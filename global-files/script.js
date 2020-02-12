@@ -39,6 +39,13 @@ function mobileMenu() {
         document.getElementById('footer-logo').style.display = 'none';
 
         document.getElementById('wit-logo').style.width = '150px';
+
+//moving the mobile iconss
+
+document.getElementById('home-link').appendChild(document.getElementById('contact'));
+
+//moving the mobile iconss
+
         // document.getElementsByTagName('footer')[0].appendChild(document.getElementById('title'));
         // document.getElementById('home').style.gridTemplateRows = '"90px" "1fr"'
         // document.getElementById('home').style.gridTemplateAreas = '"Logo Container" "Main"'
@@ -62,6 +69,12 @@ function mobileMenu() {
         document.getElementById('home').style.overflow = "auto"
         
         document.getElementById('wit-logo').style.width = '175px';
+
+//moving the mobile iconss
+
+document.getElementById('menu-items').appendChild(document.getElementById('contact'));
+
+//moving the mobile iconss
 
         document.addEventListener('scroll', function scrollCheck() {
             if (pageYOffset > 90) {
