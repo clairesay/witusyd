@@ -114,18 +114,38 @@ mobileMenuButton.addEventListener('click', function displayMenu() {
     }
 });
 
-let currentPage = document.getElementsByTagName('title')[0];
+// let currentPage = document.getElementsByTagName('title')[0];
+
+// if (currentPage == 'News & Events - Women in Technology') {
+//     console.log('hdafhs');
+// }
+
+//FINDING THE FILE NAME TO HIGHLIGHT NAV
+
+var path = window.location.pathname;
+var currentPage = path.split("/").pop();
 
 switch(currentPage) {
-    case 'News & Events - Women in Technology':
-        console.log('hhhdhhfda');
-      // code block
+    case 'index.html':
+
       break;
-    case 1:
-      // code block
+    case 'about.html':
+        document.getElementById('about').style.fontWeight = "700";
+      break;
+    case 'careers.html':
+        document.getElementById('careers').style.fontWeight = "700";
+      break;
+    case 'news-events.html':
+        document.getElementById('news-events').style.fontWeight = "700";
+      break;
+    case 'newsletters.html':
+        document.getElementById('newsletters').style.fontWeight = "700";
+      break;
+    case 'resources.html':
+        document.getElementById('resources').style.fontWeight = "700";
       break;
     default:
-      // code block
+
   }
 
 

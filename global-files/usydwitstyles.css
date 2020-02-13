@@ -124,7 +124,7 @@ strong {
 /* ///////////// SCROLL BAR STUFF ///////////// */
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
   }
   
   /* Track */
@@ -134,12 +134,13 @@ strong {
    
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #aaa; 
+    transition-duration: 0.2s;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #444; 
   }
 
   /* hiding the event card slider */
