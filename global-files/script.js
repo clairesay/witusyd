@@ -50,8 +50,8 @@ document.getElementById('home-link').appendChild(document.getElementById('contac
         // document.getElementById('home').style.gridTemplateRows = '"90px" "1fr"'
         // document.getElementById('home').style.gridTemplateAreas = '"Logo Container" "Main"'
         document.addEventListener('scroll', function scrollCheck() {
-            if ((pageYOffset > 10) && (screen650.matches)) {
-                document.getElementsByTagName('header')[0].style.boxShadow = '0px 3px 3px #aaaaaa';
+            if ((pageYOffset > 5) && (screen650.matches)) {
+                document.getElementsByTagName('header')[0].style.boxShadow = '0px 3px 3px #aaa';
                 // document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
                 // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-active');
             } else if (pageYOffset < 100) {
@@ -77,10 +77,10 @@ document.getElementById('menu-items').appendChild(document.getElementById('conta
 //moving the mobile iconss
 
         document.addEventListener('scroll', function scrollCheck() {
-            if (pageYOffset > 90) {
-                document.getElementsByTagName('nav')[0].style.boxShadow = '0px 3px 3px #aaaaaa';
+            if (pageYOffset > 1) {
+                document.getElementsByTagName('nav')[0].style.boxShadow = '0px 3px 3px #aaa';
                 // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-active');
-            } else if (pageYOffset < 90) {
+            } else if (pageYOffset < 1) {
                 document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
                 // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-inactive');
             }
@@ -114,6 +114,19 @@ mobileMenuButton.addEventListener('click', function displayMenu() {
     }
 });
 
+let currentPage = document.getElementsByTagName('title')[0];
+
+switch(currentPage) {
+    case 'News & Events - Women in Technology':
+        console.log('hhhdhhfda');
+      // code block
+      break;
+    case 1:
+      // code block
+      break;
+    default:
+      // code block
+  }
 
 
 

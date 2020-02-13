@@ -1,5 +1,5 @@
 * {
-    font-family: 'Muli', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 
@@ -16,9 +16,12 @@
 /* a#about:hover */
 #menu-items a:hover > .load-bar {
     margin-top: 0.2em;
-    height: 2px;
     transform: scaleX(1.1);
 }
+
+/* #menu-items a:active > .load-bar {
+    width: 20px;
+} */
 
 /* Floating Action Buttons  */
 
@@ -45,14 +48,14 @@
 
 #sign-up:hover ~ #sign-up-label{
     animation-fill-mode: both;
-    -webkit-transform: scale(0.6) rotate(40deg);
+    -webkit-transform: scale(0.6) rotate(38deg);
     opacity: 1;
     transition-property: transform;
 }
 
 #email:hover ~ #email-label{
     animation-fill-mode: both;
-    -webkit-transform: scale(0.6) rotate(40deg);
+    -webkit-transform: scale(0.6) rotate(36deg);
     opacity: 1;
     transition-property: transform;
     transition-duration: 0.3s;
@@ -65,15 +68,22 @@
 
 #text-path-text {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 /* End Floating Action Buttons */
 
 h1 {
     font-size: 36px;
+    font-weight: 600;
+    /* text-transform: uppercase; */
     justify-self: flex-start;
     padding: 1em 0 0.5em 0;
+}
+
+h1 span {
+    color: #aaa;
+    font-weight: 800;
 }
 
 a {
@@ -106,7 +116,7 @@ a#mini-sign-up-link:hover > svg#mini-sign-up {
 }
 
 strong {
-    font-weight: 800;
+    font-weight: 600;
     color: #6d4ff8;
 }
 
@@ -185,6 +195,7 @@ a#email:hover, a#sign-up:hover {
 
 h4 {
     padding: 1em 0;
+    font-weight: 600;
 }
 
 #blurb h4 {
@@ -202,27 +213,31 @@ h4 {
 a h4 {
     display: flex;
     color: white;
+    font-size: 14px;
 }
 
 
 /* /////////////////////// TEMPORARRRYYYYY ///////////////////////////// */
 
 #menu-items * {
-    font-weight: 600;
+    font-weight: 500;
+    /* text-transform: uppercase; */
+    font-size: 16px;
 }
 
 /* /////////////////////// TEMPORARRRYYYYY ///////////////////////////// */
 
 #wit-logo {
     object-fit: contain;
-    padding: 30px 0 0 0;
-    max-height: 60px;
+    padding: 20px 0 0 0;
+    max-height: 55px;
     -webkit-filter: drop-shadow(1px 2px 3px #6e4ff856);
+    /* margin-top: 5px; */
 }
 
 #footer-logo {
     object-fit: contain;
-    max-height: 60px;
+    max-height: 40px;
 }
 
 nav > a {
@@ -253,7 +268,7 @@ nav > a {
 #home {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 140px 60px 1fr 150px;
+    grid-template-rows: 120px 60px 1fr 100px;
     grid-template-areas: "LogoContainer" "Nav" "Main" "Footer"
 }
 
@@ -268,7 +283,7 @@ nav {
     position: sticky;
     top: 0;
     background-color: #ffffff;
-    box-shadow: 0px 3px 3px #aaaaaa;
+    /* box-shadow: 0px 3px 3px #aaaaaa; */
     /* background-color: #6d4ff8; */
 }
 
@@ -322,7 +337,7 @@ main {
     grid-template-columns: 10% 1fr 10%;
     grid-template-rows: auto;
 
-    min-height: calc(100vh - 350px);
+    min-height: calc(100vh - 280px);
 }
 
 /* Main Content Landing*/
@@ -393,7 +408,7 @@ main#about-us-page {
 
 /* Footer */
 footer {
-    background-color: #6d4ff8;
+    background-color: #444;
     color: white;
     display: grid;
     grid-template-columns: 10% 1fr 10%;
@@ -414,9 +429,13 @@ height: 2.5rem;  */
 }
 
 #footer-content > h2 {
+
+}
+
+#society-title {
     text-align: center;
     max-width: 33vw;
-    font-size: 20px;
+    font-size: 12px;
 }
 
 
@@ -445,15 +464,15 @@ height: 2.5rem;  */
 #team-profile {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #team-profile > * {
-    width: 42%;
+    width: 45%;
 }
 
 #team-profile > h1 {
-    width: 50%
+    width: 100%
 }
 
 .break {
@@ -469,6 +488,7 @@ h3 > p {
 h3 {
     display: flex;
     flex-direction: column;
+    font-weight: 600;
 }
 
 /* Article/Resource Pages */
@@ -531,7 +551,7 @@ main#news-events-page {
 
 #events > h1 {
     align-self: flex-start;
-    padding: 0.5em 0;
+    /* padding: 0.5em 0; */
 }
 
 #event-sliders {
@@ -558,13 +578,19 @@ main#news-events-page {
 
 #event-card-select {
     padding: 1em;
+    display: flex;
+    
 }
 
 #event-card-select input {
     opacity: 0;
-    width: 40px;
+    /* width: 40px; */
 
     /* height: 100px; */
+}
+
+label:hover {
+    cursor: pointer;
 }
 
 input:checked > .radio-mark {
@@ -573,9 +599,14 @@ input:checked > .radio-mark {
 }
 
 .radio-mark {
+    position: relative;
+    top: -10px;
+    width: 5vw;
+    height: 5px;
     background-color: #aaaaaa;
-    margin: 0 0.5em;
+    margin: 0 5px;
     transition-duration: 0.2s;
+    /* transform: scaleX(2); */
     /* height: 0.2px; */
     /* transform: scale(0.5); */
 }
@@ -583,8 +614,6 @@ input:checked > .radio-mark {
 .radio-mark:hover {
     background-color: #6d4ff8;
 }
-
-
 
 #last-event {
     padding-left: 3em;
@@ -617,7 +646,7 @@ a.source-link {
     flex-direction: column;
     justify-content: center;
 
-    font-weight: 700;
+    font-weight: 600;
     font-size: 24px;
     width: 100%;
     padding-right: 0.5em;
@@ -696,8 +725,7 @@ main#error-page {
 
     h1 {
         margin-left: 3vw;
-        padding-bottom: 10px;
-        padding-top: 10px;
+        padding: 30px 0 15px 0;
     }
 
     #about-us-page h1 {
@@ -833,7 +861,7 @@ main#error-page {
     }
 
     h2#society-title {
-        font-size: 18px;
+        font-size: 10px;
     }
 
     #related-articles > article {
@@ -867,7 +895,7 @@ main#error-page {
 
     /* MAIN STRUCTURE */
     #home {
-        grid-template-rows: 100px 0 1fr 150px;
+        grid-template-rows: 100px 0 1fr 100px;
         grid-template-areas: "LogoContainer" "Nav" "Main" "Footer";
     }
 
@@ -911,7 +939,7 @@ main#error-page {
     }
 
     main {
-        min-height: calc(100vh - 250px);
+        min-height: calc(100vh - 200px);
     }
 
     #home-link {
@@ -923,6 +951,8 @@ main#error-page {
 
     #contact {
         margin-right: 0;
+        /* display: flex; */
+        /* justify-self: flex-end; */
     }
 
     
@@ -930,9 +960,9 @@ main#error-page {
         margin-left: 0;
     }
 
-    #home-link > * {
+    /* #home-link > * {
         margin: 0 0.2em;
-    }
+    } */
 
 
     /* Moving NAV ELEMENTS to overlay hey*/
@@ -953,13 +983,14 @@ main#error-page {
     }
 
     #contact {
-        margin-right: 20px;
+        /* margin-right: 20px; */
     }
 
     #contact > * {
-        padding: 0.6em;
+        padding: 1.5vw;
         fill: white;
         width: 8vw;
+        max-width: 35px;
 
     }
 
@@ -1007,7 +1038,7 @@ main#error-page {
     /* FOOTER */
     h2#society-title {
         text-align: left;
-        font-size: 16px;
+        font-size: 12px;
     }
 
     #related-articles {
@@ -1028,9 +1059,9 @@ main#error-page {
 
 
     .event-card {
-        width: 400px;
+        width: 300px;
         /* Change this height to auto when we have a defined size for our event cards */
-        height: 200px;
+        height: 150px;
         padding: 0 0.5em;
     }
 
@@ -1047,6 +1078,12 @@ main#error-page {
         width: 90vw;
         height: 1630px;
     }
+
+    .radio-mark {
+        width: 8vw;
+        /* margin: 0 0.2vw; */
+    }
+    
 
 }
 
@@ -1067,7 +1104,7 @@ main#error-page {
 
     .news-article-image {
         height: 180px;
-        width: 300px;
+        width: 290px;
         padding: 1em;
     }   
 

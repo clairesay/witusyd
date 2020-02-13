@@ -16,25 +16,25 @@ function eventCardSize() {
             } else if (document.getElementById('2').checked){
                 document.getElementById('event-sliders').scrollTo({
                     top: 100,
-                    left: 400,
+                    left: 200,
                     behavior: 'smooth'
                   });
             } else if (document.getElementById('3').checked) {
                 document.getElementById('event-sliders').scrollTo({
                     top: 100,
-                    left: 800,
+                    left: 600,
                     behavior: 'smooth'
                   });
             } else if (document.getElementById('4').checked) {
                 document.getElementById('event-sliders').scrollTo({
                     top: 100,
-                    left: 1100,
+                    left: 900,
                     behavior: 'smooth'
                   });
             } else if (document.getElementById('5').checked) {
                 document.getElementById('event-sliders').scrollTo({
                     top: 100,
-                    left: 1800,
+                    left: 1200,
                     behavior: 'smooth'
                   });
             } else {
@@ -44,7 +44,7 @@ function eventCardSize() {
         
         document.getElementById('event-sliders').addEventListener('scroll', function eventSliderLink() {
             
-            if (document.getElementById('event-sliders').scrollLeft < 400) {
+            if (document.getElementById('event-sliders').scrollLeft < 300) {
                 document.getElementById('1').checked = true;
                 document.getElementsByClassName('radio-mark')[0].style.backgroundColor = '#6d4ff8';
                 document.getElementsByClassName('radio-mark')[1].style.backgroundColor = '#aaaaaa';
@@ -52,7 +52,7 @@ function eventCardSize() {
                 document.getElementsByClassName('radio-mark')[3].style.backgroundColor = '#aaaaaa';
                 document.getElementsByClassName('radio-mark')[4].style.backgroundColor = '#aaaaaa';
 
-            } else if (document.getElementById('event-sliders').scrollLeft < 800) {
+            } else if (document.getElementById('event-sliders').scrollLeft < 600) {
                 document.getElementById('2').checked = true;
                 document.getElementsByClassName('radio-mark')[1].style.backgroundColor = '#6d4ff8';
                 document.getElementsByClassName('radio-mark')[0].style.backgroundColor = '#aaaaaa';
@@ -60,7 +60,7 @@ function eventCardSize() {
                 document.getElementsByClassName('radio-mark')[3].style.backgroundColor = '#aaaaaa';
                 document.getElementsByClassName('radio-mark')[4].style.backgroundColor = '#aaaaaa';
 
-            } else if (document.getElementById('event-sliders').scrollLeft < 1200) {
+            } else if (document.getElementById('event-sliders').scrollLeft < 900) {
                 document.getElementById('3').checked = true;
                 document.getElementsByClassName('radio-mark')[2].style.backgroundColor = '#6d4ff8';
                 document.getElementsByClassName('radio-mark')[0].style.backgroundColor = '#aaaaaa';
@@ -68,7 +68,7 @@ function eventCardSize() {
                 document.getElementsByClassName('radio-mark')[3].style.backgroundColor = '#aaaaaa';
                 document.getElementsByClassName('radio-mark')[4].style.backgroundColor = '#aaaaaa';
 
-            } else if (document.getElementById('event-sliders').scrollLeft < 1550) {
+            } else if (document.getElementById('event-sliders').scrollLeft < 1000) {
                 document.getElementById('4').checked = true;
                 document.getElementsByClassName('radio-mark')[3].style.backgroundColor = '#6d4ff8';
                 document.getElementsByClassName('radio-mark')[0].style.backgroundColor = '#aaaaaa';
