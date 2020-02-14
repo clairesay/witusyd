@@ -256,13 +256,10 @@ nav > a {
     grid-area: MobileMenu;
 }
 
-.invisible {
-    visibility: hidden;
-}
-
-.visible {
-    visibility: visible;
-    right: 0;
+#mobile-menu-arrow {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
 /* Home */
@@ -284,7 +281,7 @@ nav {
     position: sticky;
     top: 0;
     background-color: #ffffff;
-    /* box-shadow: 0px 3px 3px #aaaaaa; */
+    box-shadow: 0px 3px 3px #aaaaaa;
     /* background-color: #6d4ff8; */
 }
 
@@ -412,7 +409,7 @@ footer {
     background-color: #444;
     color: white;
     display: grid;
-    grid-template-columns: 10% 1fr 10%;
+    grid-template-columns: 10% 1fr 12%;
     grid-template-areas: ". FooterContent. ";
     margin-top: 30px;
 }
@@ -426,7 +423,7 @@ height: 2.5rem;  */
     grid-area: FooterContent;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 #footer-content > h2 {
@@ -435,7 +432,7 @@ height: 2.5rem;  */
 
 #society-title {
     text-align: center;
-    max-width: 33vw;
+    max-width: 40vw;
     font-size: 12px;
 }
 
@@ -509,7 +506,7 @@ h3 {
     justify-content: space-between;
 }
 
-#related-articles > article {
+#related-articles article {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -857,12 +854,12 @@ main#error-page {
     }
     
     footer {
-        grid-template-columns: 5% 1fr 100px;
+        grid-template-columns: 5% 1fr 90px;
         /* margin-top: 0; */
     }
 
     h2#society-title {
-        font-size: 10px;
+        font-size: 14px;
     }
 
     #related-articles > article {
@@ -874,6 +871,53 @@ main#error-page {
 
 @media only screen and (max-width: 650px) {
 
+/* ////////////////////MAKING THE NAAV DISAPPPERA */
+    .invisible {
+        /* visibility: hidden; */
+        animation-name: Out;
+        animation-duration: 0.1s;
+        animation-fill-mode: forwards;
+    }
+    
+    .visible {
+    
+        right: 0;
+        animation-name: In;
+        animation-duration: 0.2s;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes In {
+        from {
+            visibility: hidden;
+            opacity: 0;
+            top: 90px;
+        } 
+        
+        to {
+            visibility: visible;
+            opacity: 1;
+            top: 100px;
+        }
+    }
+    
+    @keyframes Out {
+        from {
+            visibility: visible;
+            /* transform: scale(2); */
+            opacity: 1;
+            top: 100px;
+        } 
+        
+        to {
+            /* transform: scale(1); */
+            visibility: hidden;
+            opacity: 0;
+            top: 95px;
+        }
+    }
+
+    /* ////////////////////MAKING THE NAAV DISAPPPERA */
 
     #newsletters-page {
         height: calc(100vh - 250px);
@@ -910,7 +954,8 @@ main#error-page {
         grid-template-areas: "HomeLink MobileMenu";
         /* background: #ffffff; */
         background-color: #6d4ff8;
-        margin-bottom: 0.5em;
+        box-shadow: 0px 3px 3px #aaaaaa;
+        /* margin-bottom: 0.5em; */
     }
 
     a h4 {
@@ -932,6 +977,18 @@ main#error-page {
         display: flex;
         justify-self: center;
         margin: auto 30px;
+        visibility: hidden;
+    }
+
+    #mobile-menu-arrow {
+        width: 30px;
+        margin-top: 18px;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+    }
+
+    #mobile-menu-button:checked ~ #mobile-menu-arrow {
+        transform: rotate(-180deg);
     }
 
     /*homepage only*/
@@ -968,19 +1025,20 @@ main#error-page {
 
     /* Moving NAV ELEMENTS to overlay hey*/
     nav {
-         top: 90px;
-        height: calc(100vh - 100px);
-        width: 200px;
-        left: calc(100vw - 200px);
+        top: 100px;
+        height: 375px;
+        width: 175px;
+        left: calc(100vw - 175px);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         z-index: 4;
-        /* box-shadow: -10px 3px 5px rgba(0,0,0,0.5); */
+        box-shadow: 0px 3px 3px #aaaaaa;
+        /* box-shadow: -5px 5px 5px rgba(0,0,0,0.5); */
     }
 
     nav > * {
-        margin: 25px 30px 25px auto
+        margin: 25px 25px 25px auto
     }
 
     #contact {
@@ -1084,11 +1142,19 @@ main#error-page {
         width: 8vw;
         /* margin: 0 0.2vw; */
     }
+
+    #footer-content {
+        justify-content: space-around;
+        /* grid-area: FooterContent;
+        display: flex;
+        align-items: center; */
+        /* justify-content: space-between; */
+    }
     
 
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 500px) {
 
     #news-article-link-listing article.global-article-link {
         flex-direction: column;
@@ -1133,7 +1199,7 @@ main#error-page {
 
 
     h4 {
-        font-size: 13px;
+        font-size: 14px;
         /* padding-left: 0.5em; */
     }
     

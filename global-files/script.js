@@ -29,12 +29,14 @@ menuSelect.appendChild(hamburgerMenu);*/
 /* Move the above into CSS!!! */
 
 var mobileMenuButton = document.getElementById('mobile-menu-button');
+var mobileMenuSelection = document.getElementById('mobile-menu-selection');
 
 function mobileMenu() {
     mobileMenuButton.checked = false;
 
     if (screen650.matches) {
         mobileMenuButton.setAttribute('class', 'show');
+        mobileMenuSelection.setAttribute('class', 'show');
         document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible'); 
         document.getElementById('footer-logo').style.display = 'none';
 
@@ -49,19 +51,24 @@ document.getElementById('home-link').appendChild(document.getElementById('contac
         // document.getElementsByTagName('footer')[0].appendChild(document.getElementById('title'));
         // document.getElementById('home').style.gridTemplateRows = '"90px" "1fr"'
         // document.getElementById('home').style.gridTemplateAreas = '"Logo Container" "Main"'
-        document.addEventListener('scroll', function scrollCheck() {
-            if ((pageYOffset > 5) && (screen650.matches)) {
-                document.getElementsByTagName('header')[0].style.boxShadow = '0px 3px 3px #aaa';
-                // document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
-                // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-active');
-            } else if (pageYOffset < 100) {
-                document.getElementsByTagName('header')[0].style.boxShadow = '0px 0px 0px #ffffff';
-                // document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
-                // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-inactive');
-            }
-        })
+
+
+/////////////////HEYYY SHADOW ON SCROLL/////////////////////////
+
+        // document.addEventListener('scroll', function scrollCheck() {
+        //     if ((pageYOffset > 5) && (screen650.matches)) {
+        //         document.getElementsByTagName('header')[0].style.boxShadow = '0px 3px 3px #aaa';
+        //         // document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
+        //         // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-active');
+        //     } else if (pageYOffset < 100) {
+        //         document.getElementsByTagName('header')[0].style.boxShadow = '0px 0px 0px #ffffff';
+        //         // document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
+        //         // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-inactive');
+        //     }
+        // })
     } else {
         mobileMenuButton.setAttribute('class', 'hidden');
+        mobileMenuSelection.setAttribute('class', 'hidden')
         document.getElementsByTagName('nav')[0].setAttribute('class', 'visible');
         document.getElementById('footer-logo').style.display = 'flex';
         document.getElementById('home').appendChild(document.getElementsByTagName('nav')[0]);
@@ -76,15 +83,20 @@ document.getElementById('menu-items').appendChild(document.getElementById('conta
 
 //moving the mobile iconss
 
-        document.addEventListener('scroll', function scrollCheck() {
-            if (pageYOffset > 1) {
-                document.getElementsByTagName('nav')[0].style.boxShadow = '0px 3px 3px #aaa';
-                // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-active');
-            } else if (pageYOffset < 1) {
-                document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
-                // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-inactive');
-            }
-        })
+
+
+/////////////////HEYYY SHADOW ON SCROLL/////////////////////////
+
+
+        // document.addEventListener('scroll', function scrollCheck() {
+        //     if (pageYOffset > 1) {
+        //         document.getElementsByTagName('nav')[0].style.boxShadow = '0px 3px 3px #aaa';
+        //         // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-active');
+        //     } else if (pageYOffset < 1) {
+        //         document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
+        //         // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-inactive');
+        //     }
+        // })
     }
 }
 
