@@ -58,7 +58,7 @@
     -webkit-transform: scale(0.6) rotate(36deg);
     opacity: 1;
     transition-property: transform;
-    transition-duration: 0.3s;
+    /* transition-duration: 0.3s; */
 }
 
 #curve {
@@ -754,48 +754,44 @@ main#error-page {
     }
 
     #sign-up {
-        bottom: 90px;
+        bottom: 100px;
         right: 20px;
     }
 
     #text-path-text {
-        font-size: 16px;
+        font-size: 20px;
     }
 
-    .round-label {
-        position: fixed;
-        z-index: 1;
-        display: flex;
-        opacity: 0;
+    #sign-up-label {
+        bottom: 100px;
+        right: -53px;
+        transition-duration: 0.3s;
         -webkit-transform: scale(0.2) rotate(-100deg);
     }
     
-    #sign-up-label {
-        bottom: 100px;
-        right: -60px;
-    }
-    
     #email-label {
-        bottom: 17px;
-        right: -60px;
+        bottom: 20px;
+        right: -53px;
+        transition-duration: 0.3s;
+        -webkit-transform: scale(0.2) rotate(-100deg);
     }
 
     #sign-up:hover ~ #sign-up-label{
-        transform: scale(0);
+        /* transform: scale(0); */
         animation-fill-mode: both;
-        -webkit-transform: scale(0) rotate(0deg);
+        -webkit-transform: scale(0.6) rotate(42deg);
         opacity: 1;
         transition-property: transform;
-        transition-duration: 0.3s;
+        /* transition-duration: 0.3s; */
     }
 
     #email:hover ~ #email-label{
-        transform: scale(0);
+        /* transform: scale(0); */
         animation-fill-mode: both;
-        -webkit-transform: scale(0) rotate(0deg);
+        -webkit-transform: scale(0.6) rotate(42deg);
         opacity: 1;
         transition-property: transform;
-        transition-duration: 0.3s;
+        /* transition-duration: 0.3s; */
     }
 
     /* Navigation */
@@ -870,6 +866,34 @@ main#error-page {
 
 
 @media only screen and (max-width: 650px) {
+
+
+/* ////////////////////// SOCIAL MEDIA ICONSS /////////////// */
+    /* #fb:hover, #fb:active {
+        fill: white;
+    }
+
+    #linkedin:hover, #linkedin:active {
+        fill: #ffffff;
+    }
+
+    #signup:hover, #signup:active {
+        fill:#ffffff;
+    } */
+
+    a#fb-link:hover > svg#fb {
+        transform: translateY(0px) scale(1.1);
+        fill: #ffffff;
+    }
+    
+    a#linkedin-link:hover > svg#linkedin {
+        transform: translateY(0px) scale(1.1);
+        fill: #ffffff;
+    }
+
+    a#mini-sign-up-link:hover > svg#mini-sign-up {
+        fill: #ffffff;
+    }
 
 /* ////////////////////MAKING THE NAAV DISAPPPERA */
     .invisible {
@@ -1150,8 +1174,25 @@ main#error-page {
         align-items: center; */
         /* justify-content: space-between; */
     }
-    
 
+
+    #email {
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #sign-up {
+        bottom: 90px;
+        right: 20px;
+    }
+    
+    #sign-up-label {
+        display: none;
+    }
+    
+    #email-label {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 500px) {

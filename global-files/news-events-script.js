@@ -171,3 +171,11 @@ function eventCardSize() {
     
 }
 
+
+
+// function bounceIn {
+//     var eventSliders = document.getElementById('event-sliders');
+//     var reboundPoint = 1;
+//     if reboundEnd 
+// }
+
