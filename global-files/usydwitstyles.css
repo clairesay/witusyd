@@ -692,12 +692,58 @@ main#resources-page {
     grid-template-areas: ". Resources .";
 }
 
-#resources-article-link-listing {
-    grid-area: Resources;
+main#newsletters-page {
+    grid-template-areas: ". Newsletters ."
 }
 
-.resource {
+#resources-article-link-listing{
+    grid-area: Resources;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* align-items: space-around; */
+    /* flex-direction: column; */
+}
+
+#newsletters-link-listing {
+    grid-area: Newsletters;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+}
+
+.resource, .newsletter {
     padding: 1em;
+    padding-right: 0;
+    /* flex: 0 50%; */
+}
+
+.resource-card, .newsletter-download-link {
+    width: 48%;
+}
+
+.newsletter-image-preview {
+    height: 150px;
+}
+
+.resource-card:first-of-type, .newsletter-download-link:first-of-type {
+    height: 10px;
+}
+
+.copy-link {
+    align-self: flex-start;
+    position: relative;
+    top: 25px;
+    right: 50px;
+}
+
+.download-link {
+    align-self: flex-start;
+    position: relative;
+    top: 25px;
+    right: 0px;
 }
 
 /*//////////////////////////// 404 Error /////////////////////*/
@@ -867,6 +913,14 @@ main#error-page {
 
 @media only screen and (max-width: 650px) {
 
+    /* //////////////// RESOURCE CARDS/////////////////// */
+    .resource-card, .newsletter-download-link {
+        width: 100%;
+    }
+
+    .resource-card:first-of-type, .newsletter-download-link:first-of-type {
+        display: none;
+    }
 
 /* ////////////////////// SOCIAL MEDIA ICONSS /////////////// */
     /* #fb:hover, #fb:active {
@@ -943,10 +997,10 @@ main#error-page {
 
     /* ////////////////////MAKING THE NAAV DISAPPPERA */
 
-    #newsletters-page {
+    /* #newsletters-page {
         height: calc(100vh - 250px);
     }
-    
+     */
 
     /* ANIMATED BAR */
 
