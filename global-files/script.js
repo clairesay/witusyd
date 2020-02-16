@@ -46,6 +46,7 @@ function mobileMenu() {
 
 document.getElementById('home-link').appendChild(document.getElementById('contact'));
 
+
 //moving the mobile iconss
 
         // document.getElementsByTagName('footer')[0].appendChild(document.getElementById('title'));
@@ -77,6 +78,8 @@ document.getElementById('home-link').appendChild(document.getElementById('contac
         
         document.getElementById('wit-logo').style.width = '175px';
 
+
+
 //moving the mobile iconss
 
 document.getElementById('menu-items').appendChild(document.getElementById('contact'));
@@ -104,17 +107,46 @@ var screen650 = window.matchMedia("(max-width: 650px)")
 mobileMenu(screen650);
 screen650.addListener(mobileMenu);
 
+let modalShowing = false;
+
 mobileMenuButton.addEventListener('click', function displayMenu() {
     if (mobileMenuButton.checked) {
         console.log('active');
         document.getElementsByTagName('nav')[0].setAttribute('class', 'visible');
-        // document.getElementById('logo-container').appendChild(document.getElementsByTagName('nav')[0]);
         
         document.getElementById('mobile-menu-button').style.justifySelf = 'space-around';
         document.getElementById('home').style.overflow = "hidden"
 
-        // document.getElementsByTagName('footer')[0].style.gridTemplateRows = '90px 0 1fr 180px'
-        // document.getElementsByTagName('footer')[0].style.gridTemplateAreas = '"LogoContainer" "Nav" "Main" "Footer"'
+        ///////CHNANGEE///////////////
+        modalShowing == true;
+        console.log(modalShowing);
+        //CLICK IN BACKGROUND REMOVES MENU
+        event.stopPropagation();
+        if (modalShowing == true) {
+          console.log('faleeee');
+          document.addEventListener('click', function exitMenu(evt) {
+
+              var navMenu = document.getElementById('menu-items');
+              var targetElement = evt.target;
+
+              if (targetElement == navMenu) {
+
+                  console.log('INSIDE');
+              } else {
+                document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible'); 
+                // document.getElementById('home').appendChild(document.getElementsByTagName('nav')[0]);
+        
+                document.getElementById('mobile-menu-button').style.justifySelf = 'flex-end';
+                document.getElementById('home').style.overflow = "auto"
+                  console.log('OUTSIDE');
+                  modalShowing = false;
+              }
+          });
+        }
+
+
+        //CLICK IN BACKGROUND REMOVES MENU
+
 
     } else if ((mobileMenuButton.checked !== true)) {
         console.log('notactive');
