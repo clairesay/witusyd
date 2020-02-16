@@ -107,7 +107,7 @@ var screen650 = window.matchMedia("(max-width: 650px)")
 mobileMenu(screen650);
 screen650.addListener(mobileMenu);
 
-let modalShowing = false;
+var modlShowing = false;
 
 mobileMenuButton.addEventListener('click', function displayMenu() {
     if (mobileMenuButton.checked) {
@@ -117,12 +117,12 @@ mobileMenuButton.addEventListener('click', function displayMenu() {
         document.getElementById('mobile-menu-button').style.justifySelf = 'space-around';
         document.getElementById('home').style.overflow = "hidden"
 
-        ///////CHNANGEE///////////////
-        modalShowing == true;
-        console.log(modalShowing);
+        modlShowing = true;
+
+        console.log(modlShowing);
         //CLICK IN BACKGROUND REMOVES MENU
         event.stopPropagation();
-        if (modalShowing == true) {
+        if (modlShowing == true) {
           console.log('faleeee');
           document.addEventListener('click', function exitMenu(evt) {
 
@@ -130,16 +130,18 @@ mobileMenuButton.addEventListener('click', function displayMenu() {
               var targetElement = evt.target;
 
               if (targetElement == navMenu) {
-
                   console.log('INSIDE');
-              } else {
+              } else if (mobileMenuButton.addListener('click') == true) { //CHANGE
+                  mobileMenuButton.checked = false;       //CHANGE
+              }else {
+                console.log('notactive');
+                mobileMenuButton.checked = false;
                 document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible'); 
                 // document.getElementById('home').appendChild(document.getElementsByTagName('nav')[0]);
         
                 document.getElementById('mobile-menu-button').style.justifySelf = 'flex-end';
                 document.getElementById('home').style.overflow = "auto"
-                  console.log('OUTSIDE');
-                  modalShowing = false;
+                modlShowing = false;
               }
           });
         }
