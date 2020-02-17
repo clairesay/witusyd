@@ -1164,7 +1164,7 @@ main#error-page {
 
     /* MAIN STRUCTURE */
     #home {
-        grid-template-rows: 100px 0 1fr 100px;
+        grid-template-rows: 75px 0 1fr 100px;
         grid-template-areas: "LogoContainer" "Nav" "Main" "Footer";
     }
 
