@@ -331,26 +331,26 @@ switch(currentPage) {
 // });
 
 
-// document.getElementById('copyable').addEventListener('click', function copyText() {
-  const textToCopy = document.getElementById('copyable')
+//// document.getElementById('copyable').addEventListener('click', function copyText() {
+//   const textToCopy = document.getElementById('copyable')
 
- textToCopy.onclick = function() {
-    document.execCommand("copy");
-    // console.log('ehehhehe');
-  }
+//  textToCopy.onclick = function() {
+//     document.execCommand("copy");
+//     // console.log('ehehhehe');
+//   }
 
- textToCopy.addEventListener("copy", function(event) {
-    event.preventDefault();
-    if (event.clipboardData) {
-      event.clipboardData.setData("text/plain", textToCopy.textContent);
-      console.log(event.clipboardData.getData("text"))
-      document.getElementsByClassName('tooltip')[0].innerHTML = 'Text Copied!';
-      setTimeout(function() {
-        // document.getElementsByClassName('tooltip')[0].style.opacity = "0";
-        // document.getElementsByClassName('tooltip')[0].style.visibility = "hidden";
-        document.getElementsByClassName('tooltip')[0].innerHTML = 'Click to Copy';
-      }, 2000);
-    }
-  });
+//  textToCopy.addEventListener("copy", function(event) {
+//     event.preventDefault();
+//     if (event.clipboardData) {
+//       event.clipboardData.setData("text/plain", textToCopy.textContent);
+//       console.log(event.clipboardData.getData("text"))
+//       document.getElementsByClassName('tooltip')[0].innerHTML = 'Text Copied!';
+//       setTimeout(function() {
+//         // document.getElementsByClassName('tooltip')[0].style.opacity = "0";
+//         // document.getElementsByClassName('tooltip')[0].style.visibility = "hidden";
+//         document.getElementsByClassName('tooltip')[0].innerHTML = 'Click to Copy';
+//       }, 2000);
+//     }
+//   });
 
 // })

@@ -1115,13 +1115,13 @@ main#error-page {
         from {
             visibility: hidden;
             opacity: 0;
-            top: 90px;
+            top: 70px;
         } 
         
         to {
             visibility: visible;
             opacity: 1;
-            top: 100px;
+            top: 75px;
         }
     }
     
@@ -1130,14 +1130,14 @@ main#error-page {
             visibility: visible;
             /* transform: scale(2); */
             opacity: 1;
-            top: 100px;
+            top: 75px;
         } 
         
         to {
             /* transform: scale(1); */
             visibility: hidden;
             opacity: 0;
-            top: 95px;
+            top: 70px;
         }
     }
 
@@ -1193,6 +1193,8 @@ main#error-page {
     }
 
     #wit-logo {
+        width: 100px;
+        max-height: 45px;
         /* margin-top: 0; */
         padding: 0;
         /* position: absolute;
@@ -1260,7 +1262,7 @@ main#error-page {
 
     /* Moving NAV ELEMENTS to overlay hey*/
     nav {
-        top: 100px;
+        top: 75px;
         height: 375px;
         width: 175px;
         left: calc(100vw - 175px);
