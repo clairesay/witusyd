@@ -44,8 +44,10 @@ function mobileMenu() {
 
 //moving the mobile iconss
 
-document.getElementById('home-link').appendChild(document.getElementById('contact'));
-
+document.getElementById('logo-container').appendChild(document.getElementById('contact'));
+// document.getElementById('contact').style.gridArea = 'Contact';
+// document.getElementById('logo-container').style.gridTemplateColumns = '1fr 1fr 70px';
+// document.getElementById('logo-container').style.gridTemplateAreas = 'HomeLink Contact MobileMenu'
 
 //moving the mobile iconss
 
@@ -109,56 +111,76 @@ screen650.addListener(mobileMenu);
 
 var modlShowing = false;
 
-mobileMenuButton.addEventListener('click', function displayMenu() {
-    if (mobileMenuButton.checked) {
-        console.log('active');
-        document.getElementsByTagName('nav')[0].setAttribute('class', 'visible');
+document.getElementById('mobile-menu-arrow').addEventListener('click', function decipher() {
+  // var targetElement = evt.target;
+  if (mobileMenuButton.checked) {
+    console.log('heyho');
+    // event.stopPropagation();
+    document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible');
         
-        document.getElementById('mobile-menu-button').style.justifySelf = 'space-around';
-        document.getElementById('home').style.overflow = "hidden"
+    document.getElementById('mobile-menu-button').style.justifySelf = 'flex-end';
+    document.getElementById('home').style.overflow = "auto"
+  } else if (mobileMenuButton.checked !== true) {
+    console.log('hihi');
+    document.getElementsByTagName('nav')[0].setAttribute('class', 'visible'); 
 
-        modlShowing = true;
+    document.getElementById('mobile-menu-button').style.justifySelf = 'space-around';
+    document.getElementById('home').style.overflow = "hidden"
+  }
+})
 
-        console.log(modlShowing);
-        //CLICK IN BACKGROUND REMOVES MENU
-        event.stopPropagation();
-        if (modlShowing == true) {
-          console.log('faleeee');
-          document.addEventListener('click', function exitMenu(evt) {
+// document.getElementsByTagName('header')[0].addEventListener('click', informalMenuExit);
+document.getElementsByTagName('main')[0].addEventListener('click', informalMenuExit);
+document.getElementsByTagName('footer')[0].addEventListener('click', informalMenuExit);
 
-              var navMenu = document.getElementById('menu-items');
-              var targetElement = evt.target;
-
-              if (targetElement == navMenu) {
-                  console.log('INSIDE');
-              } else if (mobileMenuButton.addListener('click') == true) { //CHANGE
-                  mobileMenuButton.checked = false;       //CHANGE
-              }else {
-                console.log('notactive');
-                mobileMenuButton.checked = false;
-                document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible'); 
-                // document.getElementById('home').appendChild(document.getElementsByTagName('nav')[0]);
+function informalMenuExit() {
+  if (mobileMenuButton.checked) {
+    mobileMenuButton.checked = false;
+    document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible');
         
-                document.getElementById('mobile-menu-button').style.justifySelf = 'flex-end';
-                document.getElementById('home').style.overflow = "auto"
-                modlShowing = false;
-              }
-          });
-        }
+    document.getElementById('mobile-menu-button').style.justifySelf = 'flex-end';
+    document.getElementById('home').style.overflow = "auto"
+  }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// mobileMenuButton.addEventListener('click', function displayMenu(evt) {
+//   var targetElement = evt.target;
+//     if (mobileMenuButton.checked) {
+
+//         document.getElementsByTagName('nav')[0].setAttribute('class', 'visible');
+        
+//         document.getElementById('mobile-menu-button').style.justifySelf = 'space-around';
+//         document.getElementById('home').style.overflow = "hidden"
+
+//     } else if ((mobileMenuButton.checked !== true)) {
+//         console.log('notactive');
+//         document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible'); 
+
+//         document.getElementById('mobile-menu-button').style.justifySelf = 'flex-end';
+//         document.getElementById('home').style.overflow = "auto"
+//     } else if (targetElement !== mobileMenuButton) {
+//       console.log('getthis');
+//     }
+// });
+
+// document.addEventListener('click', function exitMenu(evt) {
+
+//   var navMenu = document.getElementById('menu-items');
+//   var targetElement = evt.target;
+
+//   if ((targetElement !== navMenu) && (targetElement !== mobileMenuButton)) {
+//     mobileMenuButton.checked = false;
+//     document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible'); 
+
+//     document.getElementById('mobile-menu-button').style.justifySelf = 'flex-end';
+//     document.getElementById('home').style.overflow = "auto"
+// }
+// });
 
 
-        //CLICK IN BACKGROUND REMOVES MENU
-
-
-    } else if ((mobileMenuButton.checked !== true)) {
-        console.log('notactive');
-        document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible'); 
-        // document.getElementById('home').appendChild(document.getElementsByTagName('nav')[0]);
-
-        document.getElementById('mobile-menu-button').style.justifySelf = 'flex-end';
-        document.getElementById('home').style.overflow = "auto"
-    }
-});
+// //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // let currentPage = document.getElementsByTagName('title')[0];
 
@@ -307,3 +329,28 @@ switch(currentPage) {
 //         console.log('hehe');
 //     };
 // });
+
+
+// document.getElementById('copyable').addEventListener('click', function copyText() {
+  const textToCopy = document.getElementById('copyable')
+
+ textToCopy.onclick = function() {
+    document.execCommand("copy");
+    // console.log('ehehhehe');
+  }
+
+ textToCopy.addEventListener("copy", function(event) {
+    event.preventDefault();
+    if (event.clipboardData) {
+      event.clipboardData.setData("text/plain", textToCopy.textContent);
+      console.log(event.clipboardData.getData("text"))
+      document.getElementsByClassName('tooltip')[0].innerHTML = 'Text Copied!';
+      setTimeout(function() {
+        // document.getElementsByClassName('tooltip')[0].style.opacity = "0";
+        // document.getElementsByClassName('tooltip')[0].style.visibility = "hidden";
+        document.getElementsByClassName('tooltip')[0].innerHTML = 'Click to Copy';
+      }, 2000);
+    }
+  });
+
+// })
