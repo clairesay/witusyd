@@ -344,10 +344,15 @@ main {
 
 /* Main Content Landing*/
 
-/* .landing-false-message {
+.landing-false-message {
     display: flex;
-    align-items: center;
-} */
+    flex-direction: column;
+    justify-content: center;
+}
+
+.landing-false-message h1 {
+    text-align: center
+}
 
 main#half-width {
     min-height: calc(100vh - 255px);
