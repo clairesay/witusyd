@@ -331,8 +331,8 @@ switch(currentPage) {
 // });
 
 
-//// document.getElementById('copyable').addEventListener('click', function copyText() {
-//   const textToCopy = document.getElementById('copyable')
+
+//   const textToCopy = document.getElementById('copyable');
 
 //  textToCopy.onclick = function() {
 //     document.execCommand("copy");
@@ -353,4 +353,29 @@ switch(currentPage) {
 //     }
 //   });
 
-// })
+  // function iconCopyLink() {
+  //   console.log('workstothisextent');
+  //   // var copyText = ;
+  //   // copyText.select();
+  //   document.getElementById('yessir').select();
+  //   document.execCommand("copy");
+  //   alert("Copied the text: ");
+  // }
+
+
+  function iconCopyLink(value) {
+    var tempInput = document.createElement("input");
+    tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+    tempInput.value = value;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+
+    document.getElementsByClassName('tooltip')[0].innerHTML = 'Text Copied!';
+    setTimeout(function() {
+      // document.getElementsByClassName('tooltip')[0].style.opacity = "0";
+      // document.getElementsByClassName('tooltip')[0].style.visibility = "hidden";
+      document.getElementsByClassName('tooltip')[0].innerHTML = 'Click to Copy';
+    }, 2000);
+}
