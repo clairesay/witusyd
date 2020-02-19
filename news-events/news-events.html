@@ -9,7 +9,7 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet"> -->
     </head>
 
-    <body id="home">
+    <body id="home" onload="scrollSet()">
         <header id="logo-container">
             <a href="../index.html" id="home-link">
                 <image id="wit-logo" src="../global-assets/wit-logo.png" alt="USYD Women in Technology Logo"></image>
@@ -51,9 +51,12 @@
                     <a class="slide-link" href="#future-event2">4</a>
                     <a class="slide-link" href="#future-event3">5</a> -->
                     <form id="event-card-select">
-                        <label>
-                            <!-- <div class="radio-mark" height="2px" width="100px" style="background-color: yellow; position: absolute; top: 0; left: 0;"></div> -->
+                        <!-- <label>
                             <input type="radio" id="1" name="event-card-link" checked>
+                            <div class="radio-mark"></div>
+                        </label> -->
+                        <label>
+                            <input type="radio" id="1" name="event-card-link">
                             <div class="radio-mark"></div>
                         </label>
                         <label>
@@ -64,14 +67,10 @@
                             <input type="radio" id="3" name="event-card-link">
                             <div class="radio-mark"></div>
                         </label>
-                        <label>
-                            <input type="radio" id="4" name="event-card-link">
-                            <div class="radio-mark"></div>
-                        </label>
-                        <label>
+                        <!-- <label>
                             <input type="radio" id="5" name="event-card-link">
                             <div class="radio-mark"></div>
-                        </label>
+                        </label> -->
                     </form>
                 <!-- </article> -->
             </section>

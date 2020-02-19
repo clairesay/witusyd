@@ -195,7 +195,6 @@ var currentPage = path.split("/").pop();
 
 switch(currentPage) {
     case 'index.html':
-
       break;
     case 'about.html':
         document.getElementById('about').style.fontWeight = "700";
@@ -211,6 +210,12 @@ switch(currentPage) {
       break;
     case 'resources.html':
         document.getElementById('resources').style.fontWeight = "700";
+      break;
+    case 'careers-opportunity-1.html':
+        document.getElementById('careers').style.fontWeight = "700";
+      break;
+    case 'news-article-1.html':
+        document.getElementById('news-events').style.fontWeight = "700";
       break;
     default:
 
@@ -372,10 +377,10 @@ switch(currentPage) {
     document.execCommand("copy");
     document.body.removeChild(tempInput);
 
-    document.getElementsByClassName('tooltip')[0].innerHTML = 'Text Copied!';
-    setTimeout(function() {
-      // document.getElementsByClassName('tooltip')[0].style.opacity = "0";
-      // document.getElementsByClassName('tooltip')[0].style.visibility = "hidden";
-      document.getElementsByClassName('tooltip')[0].innerHTML = 'Click to Copy';
-    }, 2000);
+    // document.getElementsByClassName('tooltip')[0].innerHTML = 'Text Copied!';
+    // setTimeout(function() {
+    //   // document.getElementsByClassName('tooltip')[0].style.opacity = "0";
+    //   // document.getElementsByClassName('tooltip')[0].style.visibility = "hidden";
+    //   document.getElementsByClassName('tooltip')[0].innerHTML = 'Click to Copy';
+    // }, 2000);
 }
