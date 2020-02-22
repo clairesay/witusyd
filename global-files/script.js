@@ -58,17 +58,17 @@ document.getElementById('logo-container').appendChild(document.getElementById('c
 
 /////////////////HEYYY SHADOW ON SCROLL/////////////////////////
 
-        // document.addEventListener('scroll', function scrollCheck() {
-        //     if ((pageYOffset > 5) && (screen650.matches)) {
-        //         document.getElementsByTagName('header')[0].style.boxShadow = '0px 3px 3px #aaa';
-        //         // document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
-        //         // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-active');
-        //     } else if (pageYOffset < 100) {
-        //         document.getElementsByTagName('header')[0].style.boxShadow = '0px 0px 0px #ffffff';
-        //         // document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
-        //         // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-inactive');
-        //     }
-        // })
+        document.addEventListener('scroll', function scrollCheck() {
+            if ((pageYOffset > 5) && (screen650.matches)) {
+                document.getElementsByTagName('header')[0].style.boxShadow = '0px 2px 3px #aaa';
+                // document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
+                // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-active');
+            } else if (pageYOffset < 100) {
+                document.getElementsByTagName('header')[0].style.boxShadow = '0px 0px 4px #aaa';
+                // document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
+                // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-inactive');
+            }
+        })
     } else {
         mobileMenuButton.setAttribute('class', 'hidden');
         mobileMenuSelection.setAttribute('class', 'hidden')
@@ -93,15 +93,15 @@ document.getElementById('menu-items').appendChild(document.getElementById('conta
 /////////////////HEYYY SHADOW ON SCROLL/////////////////////////
 
 
-        // document.addEventListener('scroll', function scrollCheck() {
-        //     if (pageYOffset > 1) {
-        //         document.getElementsByTagName('nav')[0].style.boxShadow = '0px 3px 3px #aaa';
-        //         // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-active');
-        //     } else if (pageYOffset < 1) {
-        //         document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
-        //         // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-inactive');
-        //     }
-        // })
+        document.addEventListener('scroll', function scrollCheck() {
+            if (pageYOffset > 1) {
+                document.getElementsByTagName('nav')[0].style.boxShadow = '0px 2px 3px #aaa';
+                // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-active');
+            } else if (pageYOffset < 1) {
+                document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 4px #aaa';
+                // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-inactive');
+            }
+        })
     }
 }
 

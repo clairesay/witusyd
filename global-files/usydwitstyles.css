@@ -653,7 +653,7 @@ a.source-link {
     justify-content: center;
 
     font-weight: 600;
-    font-size: 24px;
+    /* font-size: 24px; */
     width: 100%;
     padding-right: 0.5em;
 }
@@ -831,9 +831,9 @@ main#newsletters-page {
 
 #resources-article-link-listing{
     grid-area: Resources;
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 
 #newsletters-link-listing {
@@ -870,8 +870,12 @@ main#newsletters-page {
     padding-bottom: 0;
 }
 
-.resource-card, .newsletter-download-link {
+.newsletter-download-link {
     width: 48%;
+}
+
+.resource-card {
+    width: 90%;
 }
 
 .newsletter-image-preview {
