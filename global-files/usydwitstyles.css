@@ -518,13 +518,14 @@ h3 {
 }
 
 #related-articles > article >img {
-    width: 20vw;
+    /* width: 20vw;
     height: 15vw;
-    padding: 1em;
+    padding: 1em; */
+    padding: 0;
 }
 
 #related-articles > article > * {
-    text-align: center;
+    /* text-align: center; */
 }
 
 /*/////////////////////// News & Events ////////////////////*/
@@ -635,15 +636,35 @@ input:checked > .radio-mark {
     grid-area: News;
 }
 
+.global-article-link.news-article-link {
+    /* background-color: green; */
+    display: grid;
+    grid-template-columns: auto 1fr 50px;
+    grid-template-areas: " NewsImage NewsDescription NewsShare ";
+    align-items: flex-start;
+}
+
 .news-article-image {
     height: 120px;
     width: 200px;
-    padding: 1em;
+    padding-right: 1em;
+    grid-area: NewsImage;
 }   
+
+.news-article-description {
+    grid-area: NewsDescription;
+    padding-top: 1em;
+}
+
+.news-share {
+    grid-area: NewsShare;
+    margin-top: 20px;
+}
 
 a.source-link > p {
     font-weight: 400;
     font-size: 16px;
+    padding: 0.5em 0;
 }
 
 a.source-link {
@@ -868,14 +889,17 @@ main#newsletters-page {
     display: grid;
     grid-template-areas: 'ResourceDescription ResourceShare ResourceSave';
     grid-template-columns: 1fr 50px 40px;
+    max-width: 800px;
 }
 
 .resource-description {
     grid-area: ResourceDescription;
+    /* margin-right: 0.5em; */
 }
 
 .resource-description p {
     padding-top: 0.5em;
+    padding-right: 1em;
 }
 
 .resource-share {
@@ -952,7 +976,7 @@ main#newsletters-page {
 }
 
 #news-article-link-listing .share-link {
-    right: 40px;
+    /* right: 40px; */
 }
 
 .newsletter-download-link .download-link {
@@ -1008,12 +1032,12 @@ embed#modal-window {
 @media only screen and (max-width: 850px) {
 
     h1 {
-        margin-left: 3vw;
+        /* margin-left: 3vw; */
         padding: 30px 0 15px 0;
     }
 
     #about-us-page h1 {
-        margin-left: 0;
+        /* margin-left: 0; */
     }
 
         /* ANIMATED BAR */
@@ -1118,7 +1142,7 @@ embed#modal-window {
     }
 
     #news-article-link-listing a.source-link {
-        width: 80%;
+        /* width: 80%; */
     }
 
     /* Careers */
@@ -1162,6 +1186,62 @@ embed#modal-window {
 
     #opportunity-details p {
         width: 90%;
+    }
+
+    /* ///////////////////NEWS CARDSSSSSSSSSS../////////////////////////// */
+    .global-article-link.news-article-link {
+        /* background-color: green; */
+        /* display: grid; */
+        grid-template-columns: 1fr 30px;
+        grid-template-rows: auto auto;
+        grid-template-areas: " NewsImage " " NewsDescription NewsShare";
+        padding: 0 1em 1em 1em;
+        /* align-items: flex-start; */
+    }
+/* 
+    .global-article-link.news-article-link {
+        background-color: green;
+        display: grid;
+        grid-template-columns: auto 1fr 50px;
+        grid-template-areas: " NewsImage NewsDescription NewsShare ";
+        align-items: flex-start;
+    } */
+    
+    .news-article-image {
+        grid-area: NewsImage;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 100%;
+        height: 150px;
+    }   
+    
+    .news-article-description {
+        grid-area: NewsDescription;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        /* padding-top: 0.5em; */
+        padding-left: 0;
+        /* padding-bottom: 0; */
+        margin-bottom: 0;
+
+    }
+
+    a.source-link p {
+        padding-bottom: 0;
+    }
+    
+    .news-share {
+        grid-area: NewsShare;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        align-self: flex-start;
+        /* margin-top: 0.5em; */
     }
 
     /* //////////////// RESOURCE CARDS/////////////////// */
@@ -1488,13 +1568,12 @@ embed#modal-window {
     }
 
     #news-article-link-listing a.source-link {
-        margin: 0 1em 1em 1em;
+        /* margin: 0 1em 1em 1em; */
     }
 
     .news-article-image {
-        height: 180px;
-        width: 290px;
-        padding: 1em;
+        /* height: 180px;
+        width: 290px; */
     }   
 
     #menu-items:focus {
