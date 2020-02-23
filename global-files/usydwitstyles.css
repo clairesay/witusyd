@@ -864,6 +864,32 @@ main#newsletters-page {
     padding-right: 0;
 }
 
+.resource-card {
+    display: grid;
+    grid-template-areas: 'ResourceDescription ResourceShare ResourceSave';
+    grid-template-columns: 1fr 50px 40px;
+}
+
+.resource-description {
+    grid-area: ResourceDescription;
+}
+
+.resource-description p {
+    padding-top: 0.5em;
+}
+
+.resource-share {
+    grid-area: ResourceShare;
+    /* padding: auto; */
+    /* margin: 0 1em; */
+}
+
+.resource-save {
+    grid-area: ResourceSave;
+    /* padding: auto; */
+    /* margin: 0 1em; */
+}
+
 .newsletter {
     padding: 12px;
     padding-right: 0;
@@ -876,6 +902,7 @@ main#newsletters-page {
 
 .resource-card {
     width: 90%;
+    padding: 1em;
 }
 
 .newsletter-image-preview {
@@ -883,9 +910,9 @@ main#newsletters-page {
     padding-top: 0.5em;
 }
 
-.resource-card:first-of-type, .newsletter-download-link:first-of-type {
-    visibility: hidden;
-    height: 10px;
+.newsletter-download-link:first-of-type {
+    /* visibility: hidden; */
+    /* height: 10px; */
 }
 
 .copy-link {
@@ -896,18 +923,32 @@ main#newsletters-page {
 }
 
 .download-link {
-    align-self: flex-start;
+    /* align-self: flex-start; */
     position: relative;
-    top: 15px;
-    right: 25px;
+    /* align-self: center; */
+    /* top: 15px;
+    right: 25px; */
+    margin: auto;
 }
 
 .share-link {
-    align-self: flex-start;
+    /* align-self: flex-start; */
     position: relative;
+    /* top: 17px;
+    right: 90px;
+    width: 22px; */
+}
+
+.newsletter-download-link .share-link {
+    align-self: flex-start;
     top: 17px;
     right: 90px;
     width: 22px;
+}
+
+.newsletter-download-link .download-link {
+    top: 15px;
+    right: 25px;
 }
 
 #news-article-link-listing .share-link {
@@ -1124,12 +1165,16 @@ embed#modal-window {
     }
 
     /* //////////////// RESOURCE CARDS/////////////////// */
-    .resource-card, .newsletter-download-link {
+    .newsletter-download-link {
         width: 100%;
     }
 
-    .resource-card:first-of-type, .newsletter-download-link:first-of-type {
+.newsletter-download-link:first-of-type {
         display: none;
+    }
+
+    .resource-card {
+        grid-template-columns: 1fr 40px 30px;
     }
 
 /* ////////////////////// SOCIAL MEDIA ICONSS /////////////// */
