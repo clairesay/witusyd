@@ -11,11 +11,20 @@
       event.clipboardData.setData("text/plain", textToCopy.textContent);
       console.log(event.clipboardData.getData("text"))
       document.getElementsByClassName('tooltip')[0].innerHTML = 'Text Copied!';
-      setTimeout(function() {
-        // document.getElementsByClassName('tooltip')[0].style.opacity = "0";
-        // document.getElementsByClassName('tooltip')[0].style.visibility = "hidden";
-        document.getElementsByClassName('tooltip')[0].innerHTML = 'Click to Copy';
-      }, 2000);
+      textToCopy.addEventListener('mouseleave', function() {
+        console.log('left');
+        setTimeout(function() {
+          document.getElementsByClassName('tooltip')[0].innerHTML = 'Click to Copy';
+        }, 100);
+
+      })
+      // if (textToCopy.addEventListener("mouseleave")) {
+      //   console.log('left');
+      //   document.getElementsByClassName('tooltip')[0].innerHTML = 'Click to Copy';
+      // }
+      // setTimeout(function() {
+        
+      // }, 2000);
     }
   });
 
