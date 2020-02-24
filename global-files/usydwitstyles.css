@@ -72,13 +72,13 @@ h1 {
     font-size: 36px;
     font-weight: 600;
     justify-self: flex-start;
-    padding: 1em 0 0.5em 0;
+    padding: 0 0 0.5em 0;
 }
 
-h1:first-of-type {
+/* h1:nth-of-type(1) {
     padding-top: 0;
     /* padding-bottom: 0.5em; */
-}
+
 
 h1 span {
     color: #aaa;
@@ -383,6 +383,7 @@ main#half-width> * {
 main#about-us-page {
     grid-template-rows: auto auto auto;
     grid-template-areas: ". Blurb ." ". TeamProfile ." ". Sponsors .";
+    row-gap: 2em;
 }
 
 #blurb {
@@ -783,7 +784,7 @@ main#careers-page {
 
 
 .careers-article-link-information p {
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 400;
 }
 
@@ -806,7 +807,7 @@ a.source-link.careers-article-link-description {
 }
 
 .slight {
-    font-weight: 500;
+    font-weight: 400;
     margin: 0.5em 0;
 }
 
@@ -816,11 +817,16 @@ a.source-link.careers-article-link-description {
     /* padding-top: 0.5em; */
     padding: 0.5em;
     /* border: 1px solid #000000; */
-    background-color: #555;
+    background-color: #aaa;
     border-radius: 2px;
     margin-top: 1em;
     color: white;
     /* justify-self: flex-end; */
+    transition-duration: 0.1s;
+}
+
+.launch:hover {
+    background-color: #555;
 }
 
 h5:last-of-type {
@@ -889,7 +895,7 @@ a.slight img {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 300px;
+    height: 325px;
     /* flex-direction: row; */
     /* flex-wrap: wrap; */
     grid-area: Details;
@@ -905,8 +911,23 @@ a.slight img {
 
 #opportunity-details p {
     font-size: 14px;
+    font-weight: 500;
     /* padding: 0.2em 2em 0.2em 0.5em; */
     /* width: 36vw; */
+}
+
+#opportunity-details h4 {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+#opportunity-details h4:first-of-type {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+#opportunity-details p:last-of-type {
+    /* padding-bottom: 1em; */
 }
 
 #opportunity-description h2 {
@@ -927,7 +948,7 @@ h2 strong {
 }
 
 .tooltip {
-    background-color: #6d4ff8;
+    background-color: #555;
     color: white;
     font-weight: 600;
     /* text-align: center; */
@@ -1165,13 +1186,20 @@ embed#modal-window {
     margin-top: 75px;
     margin-bottom: 0;
 }
+
+.kitkat {
+    display: none;
+    /* width: 100%; */
+    /* height: 1em; */
+}
+
 /*/////////////////////////////////////////////////////// MEDIA QUERIES START HERE /////////////////////////////////////////////////////*/
 
 @media only screen and (max-width: 850px) {
 
     h1 {
         /* margin-left: 3vw; */
-        padding: 30px 0 15px 0;
+        /* padding: 0 0 15px 0; */
     }
 
     #about-us-page h1 {
@@ -1290,7 +1318,8 @@ embed#modal-window {
     }
 
     #careers-opportunity-1-page {
-        grid-template-columns: 5% 1fr 1em 45px 165px 5%;
+        /* grid-template-columns: 5% 1fr 1em 45px 165px 5%; */
+        grid-template-columns: 5% 45px 165px 2em 1fr 5%;
     }
     
     
@@ -1336,6 +1365,27 @@ embed#modal-window {
         width: 90%;
     }
 
+    .kitkat {
+        display: flex;
+        width: 100%;
+        height: 0;
+    }
+
+    #opportunity-details {
+        padding: 0.3em 1em 0 1em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        height: 120px;
+        /* flex-direction: row; */
+        /* flex-wrap: wrap; */
+        grid-area: Details;
+        position: sticky;
+        top: 80px;
+        border-right: 1px solid #ddd;
+    }
+
     /* ///////////////////CAREERRSSSSSSSSS CARDSSSSSSSSSS../////////////////////////// */
 
     .careers-article-link {
@@ -1345,6 +1395,14 @@ embed#modal-window {
         grid-template-areas: "CareersDescription CareersDescription" "CareersImage CareersInformation";
         width: auto;
         /* row-gap: 10px; */
+    }
+
+    #careers-opportunity-1-page {
+        grid-template-columns: 5% 45px 1fr 5%;
+        grid-template-rows: 150px auto;
+        grid-template-areas: " . CareersImage Details ." " . Opportunity Opportunity.";
+        row-gap: 0;
+        /* CareersImage Details */
     }
     
     .careers-article-image {
@@ -1360,6 +1418,10 @@ embed#modal-window {
         /* margin: 0 1em; */
     
     }  
+
+    #careers-opportunity-1-page .careers-article-image {
+        /* width: 10%; */
+    }
     
     .careers-article-link-information {
         grid-area: CareersInformation;
@@ -1372,12 +1434,12 @@ embed#modal-window {
     
     .careers-article-link-information h4 {
         padding: 0;
-        font-size: 14px;
+        font-size: 12px;
         /* font-size: 14px; */
     }
     
     .careers-article-link-information p {
-        font-size: 12px;
+        font-size: 14px;
     }
     
     .careers-article-link-description {
@@ -1404,8 +1466,21 @@ embed#modal-window {
 
     .slight {
         /* font-weight: 500; */
-        margin-top: 0;
+        /* margin-top: 0; */
         margin: 0 2em;
+    }
+
+    #opportunity-details .slight, #opportunity-details h5 {
+        margin: 0 0.5em;
+        width: 30%;
+    }
+
+    #opportunity-details h5 {
+        margin-top: 10px;
+    }
+
+    #opportunity-details h5.marker {
+        margin-top: 10px;
     }
 
     .launch {
@@ -1418,6 +1493,7 @@ embed#modal-window {
         /* margin-top: 0em; */
         /* color: #000000; */
         /* justify-self: flex-end; */
+        /* width: 30%; */
     }
     
     h5:last-of-type {
@@ -1863,6 +1939,20 @@ embed#modal-window {
         /* font-weight: 500; */
         margin: 0.5em 0;
         /* margin-left: 0; */
+    }
+
+    #opportunity-details .slight, #opportunity-details h5 {
+        margin: 0 0.5em;
+        width: 45%;
+    }
+
+    #opportunity-details {
+        height: 170px;
+        
+    }
+
+    #careers-opportunity-1-page {
+        grid-template-rows: 180px auto;
     }
     
 }
