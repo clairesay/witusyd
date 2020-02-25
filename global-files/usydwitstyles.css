@@ -75,11 +75,6 @@ h1 {
     padding: 0 0 0.5em 0;
 }
 
-/* h1:nth-of-type(1) {
-    padding-top: 0;
-    /* padding-bottom: 0.5em; */
-
-
 h1 span {
     color: #aaa;
     font-weight: 800;
@@ -450,52 +445,133 @@ footer {
 
 /* About Us Profiles */
 .profile {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 50px;
+    grid-template-areas: "ProfilePicture ProfilePicture" "ProfileName ProfileLinkedIn" "ProfileInformation ProfileInformation";
+    transition-duration: 0.2s;
+    border-radius: 2px;
+    box-shadow: 0 0 2px #aaa;
+    width: 30vw;
+    margin: 1em 80px 1em 0;
+    flex-grow: 0;
+    align-self: flex-start;  
+    /* flex-basis: 50%; */
+    /* padding-bottom: 100px; */
+
+
+    /* display: flex;
+    flex-direction: column;
     align-items: center;
     transition-duration: 0.2s;
-    padding: 0.5em;
+    border-radius: 2px;
+    box-shadow: 0 0 2px #aaa; */
+}
+
+.exec-profile {
+    /* width: 30vw; */
+    /* height: 20px; */
 }
 
 .profile:hover {
-    transform: scale(1.01);
+    /* transform: scale(1.01); */
     border-radius: 2px;
-    /* box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.4); */
+    box-shadow: 0px 0px 6px #a5a5a5;
+    cursor: pointer;
 }
 
+/* TESTTTTINGGGGGGGGGGGGGGGGGGGGGGGGGGG */
+
+
+  .grow {
+    -moz-transition: height .5s;
+    -ms-transition: height .5s;
+    -o-transition: height .5s;
+    -webkit-transition: height .5s;
+    transition: height .5s;
+    height: 0;
+    overflow: hidden;
+  }  
+
+/* TESTINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG */
+
 .profile-picture {
-    width: 10vw;
-    padding-right: 1em;
+    width: 100%;
+    height: 200px;
+    grid-area: ProfilePicture;
+    /* height: 50%; */
+    /* padding-right: 1em; */
 }
 
 #team-profile {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start; /*Space-between */
 }
 
-#team-profile > * {
-    width: 45%;
+#team-profile .profile {
+
 }
 
-#team-profile > h1 {
-    width: 100%
+
+.profile h3 {
+    grid-area: ProfileName;
+    padding: 0.5em 1em;
+}
+
+.profile h3:hover {
+    /* cursor: pointer; */
+}
+
+.profile svg {
+    grid-area: ProfileLinkedIn;
+    padding: 1em 1em 0 0;
+    transition: ease-out 0.2s;
+    fill: #aaa;
+}
+
+.profile svg:hover {
+    /* transform: scale(1.1); */
+    fill: #555
+}
+
+.profile p {
+    grid-area: ProfileInformation;
+    /* padding: 0 1em1em; */
+    padding: 0 1em;
+/* background-color: green; */
+    /* opacity: 0;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+    display: none;
+    height: 0;
+    transform: scaleY(0); */
+}
+
+.profile:hover .profile p {
+    /* background-color: pink; */
+    /* opacity: 1;
+    display: flex;
+    transform: scaleY(1); */
 }
 
 .break {
     flex-basis: 100%;
     height: 30px;
+    
 }
 
 h3 > p {
     font-weight: 400;
     font-size: 14px;
+    padding-top: 0.5em;
 }
 
 h3 {
     display: flex;
     flex-direction: column;
     font-weight: 600;
+    padding: 1em;
 }
 
 /* Article/Resource Pages */
@@ -503,6 +579,7 @@ h3 {
 #news-article-1-page {
     grid-template-rows: auto;
     grid-template-areas: ". Article ." ". Related .";
+    row-gap: 2em;
 }
 
 #full-article {
@@ -511,6 +588,9 @@ h3 {
 
 #related-articles {
     grid-area: Related;
+}
+
+#related-articles #wrapper {
     display: flex;
     justify-content: space-between;
 }
@@ -523,7 +603,7 @@ h3 {
     width: 24vw;
 }
 
-#related-articles > article >img {
+#related-articles article >img {
     /* width: 20vw;
     height: 15vw;
     padding: 1em; */
@@ -746,7 +826,7 @@ main#careers-page {
 .careers-article-link {
     padding: 1em;
     display: grid;
-    grid-template-columns:  45px 160px 1fr;
+    grid-template-columns:  45px 220px 1fr;
     grid-template-areas: " CareersImage CareersInformation CareersDescription";
     width: 90%;
 }
@@ -889,7 +969,8 @@ a.slight img {
 
 #career-name {
     padding-bottom: 0.5em;
-    grid-area: CareerName
+    grid-area: CareerName;
+    /* border-bottom: 1px solid #ddd; */
 }
 
 #opportunity-details {
@@ -1222,6 +1303,8 @@ embed#modal-window {
     }
 
 
+
+
     /* Floating action buttons contact via Email and sign up  */
     #email {
         bottom: 20px;
@@ -1286,25 +1369,35 @@ embed#modal-window {
 
     /* About Us Profiles */
 
+
+
     #team-profile > * {
-        width: 100%;
+        /* width: 100%; */
+    }
+
+    #team-profile {
+        justify-content: space-between;
     }
 
     .profile {
-        padding-bottom: 1em;
+        /* padding-bottom: 1em; */
+        width: 40vw;
+        margin-right: 0;
     }
 
-    .profile-picture {
+    /* .profile-picture {
         width: 15vw;
         padding-right: 1em;
-    }
+    } */
+
+    
 
     .break {
-        height: 1px;
+        /* height: 1px; */
     }
 
     #team-profile > h1 {
-        width: 100%;
+        /* width: 100%; */
     }
     
 
@@ -1400,7 +1493,8 @@ embed#modal-window {
         grid-area: Details;
         position: relative;
         top: 0;
-        border-right: 1px solid #ddd;
+        border-right: none;
+
     }
 
     #careers-opportunity-1-page .careers-article-image {
@@ -1743,13 +1837,36 @@ embed#modal-window {
         justify-content: space-between;
     }
 
-    .profile-picture {
-        width: 20vw;
-        padding-right: 1em;
+    .profile {
+        width: 100%;
+        max-width: 450px;
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 50px;
+        grid-template-areas: "ProfilePicture ProfilePicture" "ProfileName ProfileLinkedIn" "ProfileInformation ProfileInformation";
+
+        /* display: flex;
+        flex-direction: row; 
+        align-items: center;
+        transition-duration: 0.2s;
+        padding: 0.5em;
+        border-radius: 2px;
+        box-shadow: 0 0 2px #aaa; */
     }
 
+    .profile-picture {
+        width: 100%;
+        /* height: 50%; */
+        /* padding-right: 1em; */
+    }
+
+    /* .profile-picture {
+        width: 20vw;
+        padding-right: 1em;
+    } */
+
     #team-profile > * {
-        width: 95%;
+        /* width: 95%; */
     }
 
     .break {
@@ -1763,19 +1880,16 @@ embed#modal-window {
         font-size: 12px;
     }
 
-    #related-articles {
+    #related-articles #wrapper {
         flex-direction: column;
     }
 
-    #related-articles > article {
+    #related-articles article {
         /* flex-direction: row; */
         /* width: 90%; */
         width: 100%;
     }
     
-    #related-articles > article > * {
-        /* text-align: left; */
-    }
 
 
     .event-card {
