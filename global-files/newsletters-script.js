@@ -1,7 +1,28 @@
 let modalShowing = false;
-document.getElementsByClassName('newsletter')[1].addEventListener('click', function displayNewsletterModal() {
+for (let i = 0; i < 4; i ++) {
+document.getElementsByClassName('newsletter')[i].addEventListener('click', function displayNewsletterModal() {
     console.log('hdfsds');
-    document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/JDD.pdf');
+
+    switch(i) {
+        case 0:
+            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/JDD.pdf');
+          // code block
+          break;
+        case 1:
+            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/JDD.pdf');
+          // code block
+          break;
+        case 2:
+            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/JDD.pdf');
+            // code block
+          break;
+        case 3:
+            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/JDD.pdf');
+            // code block
+          break;
+        default:
+          // code block
+      }
 
     document.getElementById('modal').style.display = "flex";
     document.getElementById('home').style.overflow = "hidden";
@@ -29,6 +50,7 @@ document.getElementsByClassName('newsletter')[1].addEventListener('click', funct
 }
 
 });
+}
 
 // if (modalShowing == true) {
     // console.log('NOWWN')

@@ -417,15 +417,18 @@ main {
 }
 
 main#half-width {
-    grid-template-rows: calc(100vh - 180px - 4em) auto calc(100vh - 60px) calc(100vh - 60px);
-    grid-template-areas: ". Landing ." ". Story1 ." ". Story2 ." ". Story3 .";
+    grid-template-rows: calc(100vh - 180px - 4em) calc(100vh - 60px) auto 220px;
+    grid-template-areas: ". Landing ." ". Story1 ." ". Story2 ." "Story3 Story3 Story3" ;
     overflow-y: auto;
     scroll-snap-type: y mandatory;  
+    padding-bottom: 0;
+    margin-bottom: -1px;
 }
 
 main#half-width> * {
     padding: 2em 0;
     display: grid;
+    /* min-height: 0; */
 }
 
 main#half-width #landing {
@@ -434,32 +437,32 @@ main#half-width #landing {
     grid-template-areas: "Left Right";
 }
 
-#landing i {
+#half-width i {
     padding-right: 0.5em;
 }
 
-main#half-width #story1 {
+main#half-width #story2 {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "Story1Title Story1Title Story1Title" "Story1A Story1B Story1C"
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "Story2Title Story2Title Story2Title" "Story2A Story2B Story2C" "Goals Goals Goals";
     /* grid-template-areas: ; */
 }
 
-#story1 h1 {
-    grid-area: Story1Title;
+#story2 h1 {
+    grid-area: Story2Title;
 }
 
-#story1-a {
-    grid-area: Story1A;
+#story2-a {
+    grid-area: Story2A;
 }
-#story1-b {
-    grid-area: Story1B;
+#story2-b {
+    grid-area: Story2B;
 }
-#story1-c {
-    grid-area: Story1C;
+#story2-c {
+    grid-area: Story2C;
 }
 
-#story1 article {
+#story2 article {
     padding: 1em 1.5em;
     display: flex;
     flex-direction: column;
@@ -467,20 +470,24 @@ main#half-width #story1 {
     /* border-left: 2px solid #ddd; */
 }
 
-#story1 article:first-of-type {
+#story2 article:first-of-type {
     border-left: none;
 }
 
-#story1 img {
+#story2 img {
     height: 18vw;
     padding-bottom: 1em;
     /* width: 20vw; */
     /* max-height: 18vw; */
 }
 
-#story1 h4 {
+#story2 h4 {
     padding: 0.5em 0 0 0;
     font-weight: 500;
+}
+
+#goals {
+    grid-area: Goals;
 }
 
 /* Common Page Divided Articles */
@@ -501,22 +508,49 @@ main#half-width #story1 {
     align-items: center;
 }
 
-#story1 {
-    grid-area: Story1;
-}
-
 #story2 {
     grid-area: Story2;
 }
 
 #story3 {
     grid-area: Story3;
+    background-color: #555;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-between;
+    border-bottom: 2px solid black;
+    /* padding: 1em; */
+}
+
+#story3 * {
+    /* padding: 1em 0; */
+}
+
+#story3 h2 {
+    padding-top: 1em;
+    /* text-align: center; */
+}
+
+#story3 #call-to-action {
+    max-width: 200px;
+    justify-self: center;
+    height: 25px;
+    font-size: 20px;
+    color: #555;
+    /* max-height: 40px; */
+}
+
+#story1 {
+    grid-area: Story1;
 }
 
 /* LANDING CONTENT */
 #landing img {
-    width: 100%;
+    width: auto;
     height: 100%;
+    /* margin-left: 30px; */
 }
 
 #landing-quote {
@@ -524,8 +558,9 @@ main#half-width #story1 {
     color: #ffffff;
     /* height:60%; */
     width: calc(100%);
-    margin-left: -80px;
+    margin-left: -5vw;
     padding: 1.5em;
+    min-width: 370px;
 }
 
 #landing-quote h4 {
@@ -597,6 +632,10 @@ main#about-us-page {
 .profile h3 {
     grid-area: ProfileName;
     padding: 0.5em 1em;
+}
+
+.profile h4 {
+    padding: 0 1em 0.5em 1em;
 }
 
 .profile svg {
@@ -1202,8 +1241,8 @@ main#error-page {
 }
 
 embed#modal-window {
-    margin-top: 75px;
-    margin-bottom: 0;
+    margin-top: 50px;
+    margin-bottom: 50px
 }
 
 .kitkat {
@@ -1293,8 +1332,8 @@ embed#modal-window {
     main#half-width {
         grid-template-columns: 1fr;
         min-height: calc(100vh - 255px);
-        grid-template-rows: calc(100vh - 150px) calc(100vh - 60px) calc(100vh - 60px) calc(100vh - 60px);
-        grid-template-areas: "Landing" "Story1" "Story2" "Story3";
+        grid-template-rows: calc(100vh - 150px) calc(100vh - 60px) auto auto;
+        grid-template-areas: "Landing" "Story1" "Story2" "Story3" ;
     }
 
     /* //////////////// ABOUT US PROFILES /////////////// */
@@ -1693,10 +1732,10 @@ embed#modal-window {
         grid-template-areas: "Left" "Right";
     }
 
-    main#half-width #story1 {
+    main#half-width #story2 {
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr 1fr 1fr;
-        grid-template-areas: "Story1Title" "Story1A" "Story1B" "Story1C";
+        grid-template-areas: "Story2Title" "Story2A" "Story2B" "Story2C";
         /* grid-template-areas: ; */
     }
 
