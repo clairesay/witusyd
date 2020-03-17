@@ -5,15 +5,15 @@ document.getElementsByClassName('newsletter')[i].addEventListener('click', funct
 
     switch(i) {
         case 0:
-            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/JDD.pdf');
+            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/week3.pdf');
           // code block
           break;
         case 1:
-            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/JDD.pdf');
+            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/week1.pdf');
           // code block
           break;
         case 2:
-            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/JDD.pdf');
+            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/welcomeweek.pdf');
             // code block
           break;
         case 3:
@@ -22,6 +22,7 @@ document.getElementsByClassName('newsletter')[i].addEventListener('click', funct
           break;
         default:
           // code block
+          document.getElementById('modal-window').setAttribute('src', '');
       }
 
     document.getElementById('modal').style.display = "flex";
@@ -33,17 +34,17 @@ document.getElementsByClassName('newsletter')[i].addEventListener('click', funct
     event.stopPropagation();
     if (modalShowing == true) {
     document.addEventListener('click', function exitModal(evt) {
-        // console.log('false');
+
         var modalWindow = document.getElementById('modal-window');
         var targetElement = evt.target;
 
         if (targetElement == modalWindow) {
-            // return;
-            console.log('INSIDE');
+
         } else {
+            document.getElementById('modal-window').setAttribute('src', '');
             document.getElementById('modal').style.display = "none";
             document.getElementById('home').style.overflow = "auto";
-            console.log('OUTSIDE');
+
             modalShowing = false;
         }
     });
