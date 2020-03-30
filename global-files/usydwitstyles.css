@@ -1257,6 +1257,12 @@ embed#modal-window {
     margin-bottom: 50px
 }
 
+#modal-exit {
+    /* display: hidden; */
+    position: fixed;
+
+}
+
 .kitkat {
     display: none;
 }
