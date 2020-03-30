@@ -168,23 +168,23 @@ a#email:hover, a#sign-up:hover {
 /* ///// SCROLL BAR STUFF ///// */
 /* width */
 ::-webkit-scrollbar {
-    width: 12px;
+    /* width: 12px; */
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #ddd; 
+    /* background: #ddd;  */
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #aaa; 
-    transition-duration: 0.2s;
+    /* background: #aaa; 
+    transition-duration: 0.2s; */
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    /* background: #555;  */
 }
 
 /* hiding the event card slider */
@@ -1161,6 +1161,10 @@ a.source-link.newsletter {
     width: 100%;
 }
 
+a.source-link.newsletter:hover {
+    cursor: pointer;
+}
+
 .newsletter > h3 {
     padding: 0.5em;
 }
@@ -1176,7 +1180,8 @@ a.source-link.newsletter {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    object-position: 0 0;
+    object-position: 0 5;
+    filter: brightness(50%);
 }
 
 .newsletter-download-link .share-link {
@@ -1855,7 +1860,7 @@ embed#modal-window {
     /* ///////// SIGN UP FORM ////////// */
     #sign-up-form {
         width: 100vw;
-        height: 1450px;
+        height: 1600px;
     }
 
 /* ////////// SIGN UP AND EMAILS */

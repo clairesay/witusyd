@@ -1,23 +1,27 @@
 let modalShowing = false;
-for (let i = 0; i < 4; i ++) {
+for (let i = 0; i < 5; i ++) {
 document.getElementsByClassName('newsletter')[i].addEventListener('click', function displayNewsletterModal() {
     console.log('hdfsds');
 
     switch(i) {
         case 0:
-            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/week3.pdf');
+            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/w5.pdf');
           // code block
           break;
         case 1:
-            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/week1.pdf');
+            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/w4.pdf');
           // code block
           break;
         case 2:
-            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/welcomeweek.pdf');
+            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/w3.pdf');
             // code block
           break;
         case 3:
-            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/JDD.pdf');
+            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/w2.pdf');
+            // code block
+          break;
+        case 4:
+            document.getElementById('modal-window').setAttribute('src', '../newsletters/newsletters-assets/w1.pdf');
             // code block
           break;
         default:
