@@ -10,11 +10,11 @@
     if (event.clipboardData) {
       event.clipboardData.setData("text/plain", textToCopy.textContent);
       console.log(event.clipboardData.getData("text"))
-      document.getElementsByClassName('tooltip')[0].innerHTML = 'Text Copied!';
+      document.getElementsByClassName('tooltip')[0].innerHTML = 'Copied';
       textToCopy.addEventListener('mouseleave', function() {
         console.log('left');
         setTimeout(function() {
-          document.getElementsByClassName('tooltip')[0].innerHTML = 'Click to Copy';
+          document.getElementsByClassName('tooltip')[0].innerHTML = 'Copy';
         }, 100);
 
       })
