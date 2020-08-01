@@ -8,6 +8,15 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
+    font-weight: 400;
+}
+
+p {
+    line-height: 22px;
+}
+
+i {
+    line-height: 24px;
 }
 
 body {
@@ -16,14 +25,10 @@ body {
 
 h1 {
     font-size: 36px;
-    /* font-weight: 600; */
+    font-weight: 400;
     justify-self: flex-start;
     padding: 0 0 0.5em 0;
-}
-
-strong {
-    font-weight: 600;
-    color: #6d4ff8;
+    margin-left: -0.9em
 }
 
 .slight {
@@ -39,8 +44,8 @@ strong {
 
 /* THIS IS FOR THE // IN THE HEADERS */
 h1 span {
-    color: #aaa;
-    font-weight: 800;
+    color: #e7e7e7;
+    font-weight: 600;
 }
 
 /*///// MENU ITEMS /////*/
@@ -99,19 +104,23 @@ a#linkedin-link:hover > svg#linkedin {
 }
 
 #sign-up-label {
-    bottom: 110px;
-    right: -42px;
-    transition-duration: 0.3s;
-    transform: scale(0.2) rotate(-100deg);
-    -webkit-transform: scale(0.2) rotate(-100deg);
+    bottom: 105px;
+    right: -48px;
+    /* transition-duration: 0.3s; */
+    transform: scale(0) rotate(-100deg);
+    -webkit-transform: scale(0) rotate(-100deg);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
 }
 
 #email-label {
-    bottom: 30px;
-    right: -42px;
-    transition-duration: 0.3s;
-    transform: scale(0.2) rotate(-100deg);
-    -webkit-transform: scale(0.2) rotate(-100deg);
+    bottom: 25px;
+    right: -46px;
+    /* transition-duration: 0.3s; */
+    transform: scale(0) rotate(-100deg);
+    -webkit-transform: scale(0) rotate(-100deg);
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
 }
 
 /* Contact via Email  */
@@ -122,7 +131,7 @@ a#linkedin-link:hover > svg#linkedin {
     z-index: 2;
     filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.5));
     -webkit-filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.5));
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
 }
 
 /* Sign Up */
@@ -134,7 +143,7 @@ a#linkedin-link:hover > svg#linkedin {
     z-index: 2;
     filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.5));
     -webkit-filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.5));
-    transition-duration: 0.2s;
+    transition: all 0.2s ease-in-out
 }
 
 a#email:hover, a#sign-up:hover {
@@ -143,16 +152,16 @@ a#email:hover, a#sign-up:hover {
 
 #sign-up:hover ~ #sign-up-label{
     animation-fill-mode: both;
-    transform: scale(0.6) rotate(38deg);
-    -webkit-transform: scale(0.6) rotate(38deg);
+    transform: scale(0.6) rotate(54deg);
+    -webkit-transform: scale(0.6) rotate(54deg);
     opacity: 1;
     transition-property: transform;
 }
 
 #email:hover ~ #email-label{
     animation-fill-mode: both;
-    transform: scale(0.6) rotate(36deg);
-    -webkit-transform: scale(0.6) rotate(36deg);
+    transform: scale(0.6) rotate(54deg);
+    -webkit-transform: scale(0.6) rotate(50deg);
     opacity: 1;
     transition-property: transform;
 }
@@ -491,6 +500,10 @@ footer #usu {
     margin: auto 0 auto 4em;
 }
 
+footer a {
+    margin: auto;
+}
+
 footer h3 {
     color: white;
 }
@@ -513,7 +526,7 @@ footer #social svg {
 main {
     grid-area: Main;
     display: grid;
-    grid-template-columns: 10% 1fr 10%;
+    grid-template-columns: 156px 1fr 115px;
     grid-template-rows: auto;
     padding: 2em 0;
     min-height: calc(100vh - 144px - 4em);
@@ -704,6 +717,11 @@ main#about-us-page {
     grid-area: Blurb;
 }
 
+#blurb h4 {
+    font-weight: 400;
+    text-transform: unset;
+}
+
 #team-profile {
     grid-area: TeamProfile;
 }
@@ -721,10 +739,13 @@ main#about-us-page {
     transition-duration: 0.2s;
     border-radius: 2px;
     box-shadow: 0 0 2px #aaa;
-    width: 30vw;
-    margin: 1em 80px 1em 0;
-    flex-grow: 0;
+    width: calc(50% - 24px);
+    /* row-gap: 5%; */
+    /* column-gap: 5%; */
+    /* margin: 1em 80px 1em 0; */
+    /* flex-grow: 0; */
     align-self: flex-start;  
+    margin-bottom: 48px;
 }
 
 .profile:hover {
@@ -735,23 +756,39 @@ main#about-us-page {
 
 .profile-picture {
     width: 100%;
-    height: 200px;
+    /* height: 200px; */
+    height: auto;
     grid-area: ProfilePicture;
 }
 
 #team-profile {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
+    /* align-items: space-between; */
 }
 
 .profile h3 {
     grid-area: ProfileName;
-    padding: 0.5em 1em;
+    padding: 10px 24px 8px 24px;
+    font-weight: 400;
+    text-transform: initial;
+    font-size: 24px;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+
+/* THIS IS FOR THE ABOUT CARDS */
+strong {
+    font-weight: 400;
+    color: #6d4ff8;
+    font-family: 'Oswald';
+    font-size: 18px;
 }
 
 .profile h4 {
-    padding: 0 1em 0.5em 1em;
+    padding: 0 24px 12px 24px;
+    font-weight: 400;
+    color: #aaa;
 }
 
 .profile svg {
@@ -767,7 +804,8 @@ main#about-us-page {
 
 .profile p {
     grid-area: ProfileInformation;
-    padding: 0 1em;
+    padding: 0 24px;
+    
 }
 
 /* TESTTTTINGGGGGGGGGGGGGGGGGGGGGGGGGGG */
@@ -781,6 +819,7 @@ main#about-us-page {
     transition: height .5s;
     height: 0;
     overflow: hidden;
+    grid-area: ProfileInformation;
   }  
 
 /* TESTINGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG */
@@ -790,12 +829,14 @@ h3 > p {
     font-weight: 400;
     font-size: 14px;
     padding-top: 0.5em;
+    font-family: 'Oswald', sans-serif;
+    color: #aaa;
 }
 
 h3 {
     display: flex;
     flex-direction: column;
-    font-weight: 600;
+    /* font-weight: 600; */
     /* padding: 1em; */
 }
 
@@ -855,9 +896,9 @@ main#news-events-page {
     align-items: center;
 }
 
-#events > h1 {
+/* #events > h1 {
     align-self: flex-start;
-}
+} */
 
 #event-sliders {
     width: 100%;
@@ -934,11 +975,11 @@ input:checked > .radio-mark {
     grid-template-columns: auto 1fr 50px;
     grid-template-areas: " NewsImage NewsDescription NewsShare ";
     align-items: flex-start;
-    width: 93%;
+    width: 100%;
 }
 
 .news-article-image {
-    height: 120px;
+    /* height: 120px; */
     width: 200px;
     grid-area: NewsImage;
 }   
@@ -957,6 +998,8 @@ a.source-link > p {
     font-weight: 400;
     font-size: 16px;
     padding-top: 0.5em;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: initial;
 }
 
 a.source-link {
@@ -964,7 +1007,10 @@ a.source-link {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    font-weight: 600;
+    font-weight: 400;
+    font-size: 24px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
 }
 
 #related-articles a.source-link {
@@ -1005,7 +1051,7 @@ main#careers-page {
     display: grid;
     grid-template-columns:  45px 220px 1fr;
     grid-template-areas: " CareersImage CareersInformation CareersDescription";
-    width: 90%;
+    /* width: 90%; */
 }
 
 .careers-article-image {
@@ -1033,6 +1079,8 @@ main#careers-page {
 .careers-article-link-information p {
     font-size: 14px;
     font-weight: 400;
+    font-family: 'Oswald', sans-serif;
+    color: #999999;
 }
 
 .careers-article-link-description {
@@ -1059,6 +1107,7 @@ a.source-link.careers-article-link-description {
     margin-top: 1em;
     color: white;
     transition-duration: 0.1s;
+    font-weight: 500;
 }
 
 .launch:hover {
@@ -1070,7 +1119,7 @@ h5:last-of-type {
 }
 
 #careers-opportunity-1-page {
-    grid-template-columns: 10% 45px 165px 2em 1fr 10%;
+    grid-template-columns: 156px 45px 165px 2em 1fr 115px;
     grid-template-rows: auto auto;
     grid-template-areas: ". CareersImage Details . CareerName . " " . . Details . Opportunity .";
 }
@@ -1111,6 +1160,7 @@ h5:last-of-type {
 #career-name {
     padding-bottom: 0.5em;
     grid-area: CareerName;
+    margin-left: 0;
 }
 
 #opportunity-details {
@@ -1121,13 +1171,13 @@ h5:last-of-type {
     height: 325px;
     grid-area: Details;
     position: sticky;
-    top: 80px;
+    top: 96px;
     border-right: 1px solid #ddd;
 }
 
 #careers-opportunity-1-page .careers-article-image {
     position: sticky;
-    top: 80px;
+    top: 96px;
 }
 
 #opportunity-details p {
@@ -1141,12 +1191,12 @@ h5:last-of-type {
 }
 
 #opportunity-details h4:first-of-type {
-    font-weight: 600;
+    /* font-weight: 600; */
     font-size: 14px;
 }
 
 #opportunity-description h2 {
-    font-weight: 600;
+    /* font-weight: 600; */
     padding: 0.5em 0;
 }
 
@@ -1237,6 +1287,7 @@ main#resources-page {
     display: grid;
     grid-template-areas: 'ResourceDescription ResourceShare ResourceSave';
     grid-template-columns: 1fr 40px 30px;
+    padding: 1em;
 }
 
 .resource-description {
@@ -1254,11 +1305,6 @@ main#resources-page {
 
 .resource-save {
     grid-area: ResourceSave;
-}
-
-.resource-card {
-    width: 90%;
-    padding: 1em;
 }
 
 /* ////////// NEWSLETTERS ///////////////// */
@@ -1288,6 +1334,8 @@ a.source-link.newsletter:hover {
 
 .newsletter > h3 {
     padding: 0.5em;
+    padding-top: 0.3em;
+    font-size: 24px;
 }
 
 .newsletter-download-link {
@@ -1472,7 +1520,7 @@ embed#modal-window {
 }
 
 .share-modal h4 {
-    padding: 0 0 0.5em 0;
+    padding-bottom: 0.2em;
 }
 
 .resize {
@@ -1487,7 +1535,7 @@ embed#modal-window {
     /* padding: 1em; */
 }
 
-.invisi {
+/* .invisi {
     animation-name: FadeOut;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
@@ -1497,10 +1545,10 @@ embed#modal-window {
     animation-name: FadeIn;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
-}
+} */
 
 
-@keyframes FadeIn {
+/* @keyframes FadeIn {
     from {
         visibility: hidden;
         opacity: 0;
@@ -1526,15 +1574,61 @@ embed#modal-window {
         opacity: 0;
         /* top: 65px; */
     }
-}
+} */
 
 .kitkat {
     display: none;
 }
 
+
+
+/* ///////////////////////// HAMBURGER MENU  //////////////////////////////////// */
+nav {
+    position: fixed;
+    top: 72px;
+    /* right: 24px; */
+    z-index: 8;
+    display: none;
+
+    /* margin-left: 0; */
+    width: 100%;
+    /* padding-top: 12px; */
+    height: 54px;
+    background-color: white;
+    filter: drop-shadow(0 2px 2px #e7e7e7);
+}
+
+nav a.page-link {
+    margin: auto 12px;
+}
+
+
+
+
 /*/////////////////////////////////////////////////////// MEDIA QUERIES START HERE /////////////////////////////////////////////////////*/
 
+@media only screen and (max-width: 984px) {
+    a.page-link {
+        margin: auto 1em 1em 1em;
+    }
+
+}
+
+
 @media only screen and (max-width: 850px) {
+    h1 {
+        margin-left: 0;
+    }
+
+    /* //////////////////////// HAMBURGER MENU CONTENT ////////////////////// */
+    header p ~ a {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+    }
 
     /* ANIMATED BAR FOR MENU */
 
@@ -1545,7 +1639,7 @@ embed#modal-window {
     }
 
     /* ///////////// Floating action buttons contact via Email and sign up /////////////////////*/
-    #email {
+    /* #email {
         bottom: 20px;
         right: 20px;
     }
@@ -1589,7 +1683,7 @@ embed#modal-window {
         -webkit-transform: scale(0.6) rotate(42deg);
         opacity: 1;
         transition-property: transform;
-    }
+    } */
 
     /* //////////// HEADER /////////// */
     h2#society-title {
@@ -1597,9 +1691,9 @@ embed#modal-window {
     }
 
     /* ///// NAVIGATION ///////*/
-    nav {
+    /* nav {
         grid-template-columns: 2% 0.9fr 0.7fr 0.8fr 1.1fr 1fr 1.3fr 2%;
-    }
+    } */
 
     /* /////////////// MAIN ////////// */
     main {
@@ -1626,15 +1720,15 @@ embed#modal-window {
     }
 
     .profile {
-        width: 40vw;
-        margin-right: 0;
+        /* width: 40vw; */
+        /* margin-right: 0; */
     }
 
     /* //////// FOOTER ////////// */
-
+/* 
     footer {
         grid-template-columns: 5% 1fr 90px;
-    }
+    } */
 
     /* ///////////// NEWS AND EVENTS //////////// */
 
@@ -1859,7 +1953,7 @@ embed#modal-window {
     }
 
 /* ////////////////////MAKING THE NAAV DISAPPPEAR ////////////////// */
-    .invisible {
+    /* .invisible {
         animation-name: Out;
         animation-duration: 0.1s;
         animation-fill-mode: forwards;
@@ -1910,7 +2004,7 @@ embed#modal-window {
         grid-area: HomeLink;
         margin: 0 auto 0 20px;
     } */
-
+/* 
     #logo-container {
         grid-area: LogoContainer;
         position: sticky;
@@ -1940,10 +2034,10 @@ embed#modal-window {
     h2#society-title {
         text-align: left;
         font-size: 12px;
-    }
+    } */
 
     /*///////////// NAVIGATION ////////////////*/
-
+/* 
     .load-bar {
         margin-top: 0;
         transform-origin: center right;
@@ -1954,10 +2048,10 @@ embed#modal-window {
         height: 2px;
         transform: scaleY(1.1);
         transform-origin: center right;
-    }
+    } */
 
     /* Moving NAV ELEMENTS to overlay hey*/
-    nav {
+    /* nav {
         top: 70px;
         height: 325px;
         width: 175px;
@@ -1999,17 +2093,23 @@ embed#modal-window {
 
     #mobile-menu-button:checked ~ #mobile-menu-arrow {
         transform: rotate(-180deg);
-    }
+    } */ */
 
     #contact {
         order: 2;
         padding: 0 20px;
     }
 
+    /* /////////////// FOOTER //////////////////// */
+
+    footer {
+        grid-template-columns: auto auto 1fr auto 72px;
+    }
+
     /* /////////////// MAIN STRUCTURE //////////// */
     #home {
-        grid-template-rows: 75px 0 1fr 100px;
-        grid-template-areas: "LogoContainer" "Nav" "Main" "Footer";
+        /* grid-template-rows: 75px 0 1fr 100px;
+        grid-template-areas: "LogoContainer" "Nav" "Main" "Footer"; */
     }
 
     main#half-width #landing {
@@ -2071,8 +2171,8 @@ embed#modal-window {
     }
 
     .profile {
-        width: 100%;
-        max-width: 450px;
+        /* width: 100%; */
+        /* max-width: 450px; */
         display: grid;
         grid-template-rows: auto auto auto;
         grid-template-columns: 1fr 50px;
@@ -2090,9 +2190,9 @@ embed#modal-window {
 
     /* /////////////// FOOTER ////////////////// */
 
-    #footer-content {
+    /* #footer-content {
         justify-content: space-around;
-    }
+    } */
 
     /* ///////////// NEWS & EVENTS ///////////// */
 
@@ -2187,6 +2287,24 @@ embed#modal-window {
         margin: 0.5em 0;
     }
 
+    /* //////////////////////// HAMBURGER MENU CONTENT ////////////////////// */
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        right: 12px;
+        /* display: hidden; */
+        padding: 0.5em 1em;
+        background-color: blue;
+    }
+
+    nav a.page-link {
+        margin: 0.5em auto;
+        margin-left: 0;
+    }
+
+
     /* ////// MAIN //////////////// */
     main {
         grid-template-columns: 0 1fr 0;
@@ -2214,7 +2332,7 @@ embed#modal-window {
         grid-row-start: 1;
         grid-row-end: 2;
         width: 100%;
-        height: 150px;
+        /* height: 150px; */
     }   
     
     .news-article-description {
@@ -2247,7 +2365,8 @@ embed#modal-window {
     }
 
     .news-article-link .share-modal {
-        top: 200px;
+        top: 300px;
+
     }
 
     /* //////////// NAVIGATION //////////////// */
@@ -2290,6 +2409,16 @@ embed#modal-window {
         grid-template-rows: auto 180px auto;
     }
     
+
+    /* FOOTEr */
+    footer h3 {
+        display: none;
+    }
+
+    footer {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
