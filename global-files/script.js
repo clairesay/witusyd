@@ -1,147 +1,147 @@
-//Social Media Icons
-// var social = document.getElementsByClassName('social');
-// var socialIconNum = social.length;
+// //Social Media Icons
+// // var social = document.getElementsByClassName('social');
+// // var socialIconNum = social.length;
 
-// function socialIconSize() {
-//     if (screen425.matches) {
-//         for (let i = 0; i < socialIconNum; i ++) {
-//             social[i].setAttribute('width', '24');
-//         }
+// // function socialIconSize() {
+// //     if (screen425.matches) {
+// //         for (let i = 0; i < socialIconNum; i ++) {
+// //             social[i].setAttribute('width', '24');
+// //         }
+// //     } else {
+// //         for (let i = 0; i < socialIconNum; i ++) {
+// //             social[i].setAttribute('width', '28'); 
+// //         }
+// //     }
+// // }
+
+// // var screen425 = window.matchMedia("(max-width: 425px)")
+// // socialIconSize(screen425);
+// // screen425.addListener(socialIconSize);
+
+
+// /* SLIDE IN MENU */
+// /*var menuSelect = document.getElementById('home');
+// let hamburgerMenu = document.createElement('input');
+// hamburgerMenu.setAttribute('type', 'checkbox');
+// hamburgerMenu.style.display = 'none';
+// menuSelect.appendChild(hamburgerMenu);*/
+
+// /* Move the above into CSS!!! */
+
+// var mobileMenuButton = document.getElementById('mobile-menu-button');
+// var mobileMenuSelection = document.getElementById('mobile-menu-selection');
+
+// function mobileMenu() {
+//     mobileMenuButton.checked = false;
+
+//     if (screen650.matches) {
+//         mobileMenuButton.setAttribute('class', 'show');
+//         mobileMenuSelection.setAttribute('class', 'show');
+//         document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible'); 
+//         document.getElementById('footer-logo').style.display = 'none';
+
+//         document.getElementById('wit-logo').style.width = '150px';
+
+// //moving the mobile iconss
+
+// document.getElementById('logo-container').appendChild(document.getElementById('contact'));
+// // document.getElementById('contact').style.gridArea = 'Contact';
+// // document.getElementById('logo-container').style.gridTemplateColumns = '1fr 1fr 70px';
+// // document.getElementById('logo-container').style.gridTemplateAreas = 'HomeLink Contact MobileMenu'
+
+// //moving the mobile iconss
+
+//         // document.getElementsByTagName('footer')[0].appendChild(document.getElementById('title'));
+//         // document.getElementById('home').style.gridTemplateRows = '"90px" "1fr"'
+//         // document.getElementById('home').style.gridTemplateAreas = '"Logo Container" "Main"'
+
+
+// /////////////////HEYYY SHADOW ON SCROLL/////////////////////////
+
+//         document.addEventListener('scroll', function scrollCheck() {
+//             if ((pageYOffset > 5) && (screen650.matches)) {
+//                 document.getElementsByTagName('header')[0].style.boxShadow = '0px 2px 3px #aaa';
+//                 // document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
+//                 // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-active');
+//             } else if (pageYOffset < 100) {
+//                 document.getElementsByTagName('header')[0].style.boxShadow = '0px 0px 4px #aaa';
+//                 // document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
+//                 // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-inactive');
+//             }
+//         })
 //     } else {
-//         for (let i = 0; i < socialIconNum; i ++) {
-//             social[i].setAttribute('width', '28'); 
-//         }
+//         mobileMenuButton.setAttribute('class', 'hidden');
+//         mobileMenuSelection.setAttribute('class', 'hidden')
+//         document.getElementsByTagName('nav')[0].setAttribute('class', 'visible');
+//         document.getElementById('footer-logo').style.display = 'flex';
+//         document.getElementById('home').appendChild(document.getElementsByTagName('nav')[0]);
+
+//         document.getElementById('home').style.overflow = "auto"
+        
+//         document.getElementById('wit-logo').style.width = '175px';
+
+
+
+// //moving the mobile iconss
+
+// document.getElementById('menu-items').appendChild(document.getElementById('contact'));
+
+// //moving the mobile iconss
+
+
+
+// /////////////////HEYYY SHADOW ON SCROLL/////////////////////////
+
+
+//         document.addEventListener('scroll', function scrollCheck() {
+//             if (pageYOffset > 1) {
+//                 document.getElementsByTagName('nav')[0].style.boxShadow = '0px 2px 3px #aaa';
+//                 // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-active');
+//             } else if (pageYOffset < 1) {
+//                 document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 4px #aaa';
+//                 // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-inactive');
+//             }
+//         })
 //     }
 // }
 
-// var screen425 = window.matchMedia("(max-width: 425px)")
-// socialIconSize(screen425);
-// screen425.addListener(socialIconSize);
+// var screen650 = window.matchMedia("(max-width: 650px)")
+// mobileMenu(screen650);
+// screen650.addListener(mobileMenu);
 
+// var modlShowing = false;
 
-/* SLIDE IN MENU */
-/*var menuSelect = document.getElementById('home');
-let hamburgerMenu = document.createElement('input');
-hamburgerMenu.setAttribute('type', 'checkbox');
-hamburgerMenu.style.display = 'none';
-menuSelect.appendChild(hamburgerMenu);*/
-
-/* Move the above into CSS!!! */
-
-var mobileMenuButton = document.getElementById('mobile-menu-button');
-var mobileMenuSelection = document.getElementById('mobile-menu-selection');
-
-function mobileMenu() {
-    mobileMenuButton.checked = false;
-
-    if (screen650.matches) {
-        mobileMenuButton.setAttribute('class', 'show');
-        mobileMenuSelection.setAttribute('class', 'show');
-        document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible'); 
-        document.getElementById('footer-logo').style.display = 'none';
-
-        document.getElementById('wit-logo').style.width = '150px';
-
-//moving the mobile iconss
-
-document.getElementById('logo-container').appendChild(document.getElementById('contact'));
-// document.getElementById('contact').style.gridArea = 'Contact';
-// document.getElementById('logo-container').style.gridTemplateColumns = '1fr 1fr 70px';
-// document.getElementById('logo-container').style.gridTemplateAreas = 'HomeLink Contact MobileMenu'
-
-//moving the mobile iconss
-
-        // document.getElementsByTagName('footer')[0].appendChild(document.getElementById('title'));
-        // document.getElementById('home').style.gridTemplateRows = '"90px" "1fr"'
-        // document.getElementById('home').style.gridTemplateAreas = '"Logo Container" "Main"'
-
-
-/////////////////HEYYY SHADOW ON SCROLL/////////////////////////
-
-        document.addEventListener('scroll', function scrollCheck() {
-            if ((pageYOffset > 5) && (screen650.matches)) {
-                document.getElementsByTagName('header')[0].style.boxShadow = '0px 2px 3px #aaa';
-                // document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
-                // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-active');
-            } else if (pageYOffset < 100) {
-                document.getElementsByTagName('header')[0].style.boxShadow = '0px 0px 4px #aaa';
-                // document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 0px #ffffff';
-                // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-inactive');
-            }
-        })
-    } else {
-        mobileMenuButton.setAttribute('class', 'hidden');
-        mobileMenuSelection.setAttribute('class', 'hidden')
-        document.getElementsByTagName('nav')[0].setAttribute('class', 'visible');
-        document.getElementById('footer-logo').style.display = 'flex';
-        document.getElementById('home').appendChild(document.getElementsByTagName('nav')[0]);
-
-        document.getElementById('home').style.overflow = "auto"
+// document.getElementById('mobile-menu-arrow').addEventListener('click', function decipher() {
+//   // var targetElement = evt.target;
+//   if (mobileMenuButton.checked) {
+//     console.log('heyho');
+//     // event.stopPropagation();
+//     document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible');
         
-        document.getElementById('wit-logo').style.width = '175px';
+//     document.getElementById('mobile-menu-button').style.justifySelf = 'flex-end';
+//     document.getElementById('home').style.overflow = "auto"
+//   } else if (mobileMenuButton.checked !== true) {
+//     console.log('hihi');
+//     document.getElementsByTagName('nav')[0].setAttribute('class', 'visible'); 
 
+//     document.getElementById('mobile-menu-button').style.justifySelf = 'space-around';
+//     document.getElementById('home').style.overflow = "hidden"
+//   }
+// })
 
+// // document.getElementsByTagName('header')[0].addEventListener('click', informalMenuExit);
+// document.getElementsByTagName('main')[0].addEventListener('click', informalMenuExit);
+// document.getElementsByTagName('footer')[0].addEventListener('click', informalMenuExit);
 
-//moving the mobile iconss
-
-document.getElementById('menu-items').appendChild(document.getElementById('contact'));
-
-//moving the mobile iconss
-
-
-
-/////////////////HEYYY SHADOW ON SCROLL/////////////////////////
-
-
-        document.addEventListener('scroll', function scrollCheck() {
-            if (pageYOffset > 1) {
-                document.getElementsByTagName('nav')[0].style.boxShadow = '0px 2px 3px #aaa';
-                // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-active');
-            } else if (pageYOffset < 1) {
-                document.getElementsByTagName('nav')[0].style.boxShadow = '0px 0px 4px #aaa';
-                // document.getElementsByTagName('nav')[0].setAttribute('class', 'shadow-inactive');
-            }
-        })
-    }
-}
-
-var screen650 = window.matchMedia("(max-width: 650px)")
-mobileMenu(screen650);
-screen650.addListener(mobileMenu);
-
-var modlShowing = false;
-
-document.getElementById('mobile-menu-arrow').addEventListener('click', function decipher() {
-  // var targetElement = evt.target;
-  if (mobileMenuButton.checked) {
-    console.log('heyho');
-    // event.stopPropagation();
-    document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible');
+// function informalMenuExit() {
+//   if (mobileMenuButton.checked) {
+//     mobileMenuButton.checked = false;
+//     document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible');
         
-    document.getElementById('mobile-menu-button').style.justifySelf = 'flex-end';
-    document.getElementById('home').style.overflow = "auto"
-  } else if (mobileMenuButton.checked !== true) {
-    console.log('hihi');
-    document.getElementsByTagName('nav')[0].setAttribute('class', 'visible'); 
-
-    document.getElementById('mobile-menu-button').style.justifySelf = 'space-around';
-    document.getElementById('home').style.overflow = "hidden"
-  }
-})
-
-// document.getElementsByTagName('header')[0].addEventListener('click', informalMenuExit);
-document.getElementsByTagName('main')[0].addEventListener('click', informalMenuExit);
-document.getElementsByTagName('footer')[0].addEventListener('click', informalMenuExit);
-
-function informalMenuExit() {
-  if (mobileMenuButton.checked) {
-    mobileMenuButton.checked = false;
-    document.getElementsByTagName('nav')[0].setAttribute('class', 'invisible');
-        
-    document.getElementById('mobile-menu-button').style.justifySelf = 'flex-end';
-    document.getElementById('home').style.overflow = "auto"
-  }
-}
+//     document.getElementById('mobile-menu-button').style.justifySelf = 'flex-end';
+//     document.getElementById('home').style.overflow = "auto"
+//   }
+// }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -197,25 +197,25 @@ switch(currentPage) {
     case 'index.html':
       break;
     case 'about.html':
-        document.getElementById('about').style.fontWeight = "700";
+        document.getElementById('about').style.fontWeight = "600";
       break;
     case 'careers.html':
-        document.getElementById('careers').style.fontWeight = "700";
+        document.getElementById('careers').style.fontWeight = "600";
       break;
     case 'news-events.html':
-        document.getElementById('news-events').style.fontWeight = "700";
+        document.getElementById('news-events').style.fontWeight = "600";
       break;
     case 'newsletters.html':
-        document.getElementById('newsletters').style.fontWeight = "700";
+        document.getElementById('newsletters').style.fontWeight = "600";
       break;
     case 'resources.html':
-        document.getElementById('resources').style.fontWeight = "700";
+        document.getElementById('resources').style.fontWeight = "600";
       break;
     case 'careers-opportunity-1.html':
-        document.getElementById('careers').style.fontWeight = "700";
+        document.getElementById('careers').style.fontWeight = "600";
       break;
     case 'news-article-1.html':
-        document.getElementById('news-events').style.fontWeight = "700";
+        document.getElementById('news-events').style.fontWeight = "600";
       break;
     default:
 
@@ -384,3 +384,49 @@ switch(currentPage) {
     //   document.getElementsByClassName('tooltip')[0].innerHTML = 'Click to Copy';
     // }, 2000);
 }
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////
+
+const menuButton = document.getElementsByClassName('menu-arrow')[0];
+const menuArrow = document.querySelectorAll('.menu-arrow svg')[0];
+const nav = document.getElementsByTagName('nav')[0];
+var menuButtonToggle = true;
+
+menuButton.addEventListener('click', function() {
+    if (menuButtonToggle == false) {
+        nav.style.visibility = "hidden";
+        nav.style.opacity = "0";
+        nav.style.transform = "translateY(-12px)";
+        menuArrow.style.transform = "rotate(0deg)";
+        menuButtonToggle = true;
+    } else if (menuButtonToggle == true) {
+        nav.style.visibility = "visible";
+        nav.style.opacity = "1";
+        nav.style.transform = "translateY(0)";
+        menuArrow.style.transform = "rotate(180deg)";
+        menuButtonToggle = false;
+    }
+})
+
+function resizeTest(media) {
+  if (media.matches) { // If media query matches
+      nav.style.visibility = "hidden";
+      nav.style.opacity = "0";
+      nav.style.transform = "translateY(-12px)";
+      menuArrow.style.transform = "rotate(0deg)";
+      menuButtonToggle = true;
+  } else {
+      nav.style.visibility = "visible";
+      nav.style.opacity = "1";
+      nav.style.transform = "translateY(0)";
+      menuArrow.style.transform = "rotate(180deg)";
+      menuButtonToggle = false;
+  }
+}
+
+const media600 = window.matchMedia("(max-width: 500px)")
+resizeTest(media600) // Call listener function at run time
+media600.addListener(resizeTest) // Attach listener function on state changes
