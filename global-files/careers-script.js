@@ -10,9 +10,8 @@
     if (event.clipboardData) {
       event.clipboardData.setData("text/plain", textToCopy.textContent);
       console.log(event.clipboardData.getData("text"))
-      document.getElementsByClassName('tooltip')[0].innerHTML = 'Copied';
+      document.getElementsByClassName('tooltip')[0].innerHTML = 'Copied!';
       textToCopy.addEventListener('mouseleave', function() {
-        console.log('left');
         setTimeout(function() {
           document.getElementsByClassName('tooltip')[0].innerHTML = 'Copy';
         }, 100);
@@ -28,11 +27,11 @@
     }
   });
 
-  function iconCopyLink() {
-    console.log('workstothisextent');
-    // var copyText = ;
-    // copyText.select();
-    document.getElementById('yessir').select();
-    document.execCommand("copy");
-    alert("Copied the text: ");
-  }
+  // function iconCopyLink() {
+  //   console.log('workstothisextent');
+  //   // var copyText = ;
+  //   // copyText.select();
+  //   document.getElementById('yessir').select();
+  //   document.execCommand("copy");
+  //   alert("Copied the text: ");
+  // }

@@ -990,6 +990,7 @@ input:checked > .radio-mark {
 .news-article-description {
     grid-area: NewsDescription;
     padding: 1em;
+    padding-top: 0.8em;
 }
 
 .news-share {
@@ -1226,15 +1227,33 @@ h2 strong {
     background-color: #555;
     color: white;
     font-weight: 600;
-    border-radius: 8px 8px 8px 2px;
-    position: relative;
-    bottom: 5px;
-    padding: 0.2em 0.5em;
+    /* border-radius: 8px 8px 8px 2px; */
+    border-radius: 2px;
+    position: absolute;
+    left: 47px;
+    text-align: center;
+    /* right: -4px; */
+    top: -12px;
+    /* bottom: -24px; */
+    padding: 0.4em 0.8em;
     visibility: hidden;
     opacity: 0;
     transition-duration: 0.2s;
     z-index: 40;
-    display: flex;
+    transform-origin: center center;
+    /* text */
+    width: 63px;
+}
+
+.tooltip::after {
+    content: " ";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
 }
 
 .share-modal-hyperlink:hover ~ .tooltip{
@@ -1438,25 +1457,27 @@ main#error-page {
     display: none;
     z-index: 11;
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgb(0, 0, 0, 0.4);
 }
 
 #modal > embed {
-    margin: auto;
+    /* margin: auto; */
     box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.4);
 }
 
 #modal-window {
-    width: 90vw;
-    height: 85vh;
-
+    position: absolute;
+    width: calc(100vw - 10vh);
+    height: calc(90vh - 24px);
+    bottom: 5vh;
+    left: 5vh;
 }
 
 embed#modal-window {
-    margin-top: 50px;
-    margin-bottom: 50px
+    /* margin-top: 50px;
+    margin-bottom: 50px */
 }
 
 #modal-exit {
@@ -1468,10 +1489,14 @@ embed#modal-window {
 
 #modal-exit-la {
     /* background-color: green; */
+    background-color: #525659;
+    border-radius: 2px;
+    padding: 0.5em 1em;
     color: white;
     position: fixed;
-    top: 25px;
-    right: 50px;
+    top: calc(5vh - 16px);
+    right: 5vh;
+    /* right: 50px; */
     z-index: 10;
 }
 
@@ -1484,7 +1509,7 @@ embed#modal-window {
     visibility: hidden;
     /* z-index: 10; */
     position: absolute;
-    top: 60px;
+    top: 50px;
     right: 12px;
 
     width: 100px;
@@ -1500,20 +1525,24 @@ embed#modal-window {
     padding: 0.5em 0.5em 0.75em 0.5em;
     opacity: 0;
     transition: all 0.2s ease-in-out;
-
+    /* transition-delay: 1s; */
 
 }
 
-.icon-link.resource-share:hover ~ .share-modal {
+/* a.icon-link.resource-share {
+    padding: auto;
+    height: 100%;
+} */
+
+a.icon-link.resource-share:hover ~ .share-modal, a.icon-link.news-share:hover ~ .share-modal {
     visibility: visible;
     opacity: 1;
-
 }
-
-
 
 .share-modal:hover {
     visibility: visible;
+    opacity: 1;
+    transition-delay: 0.6s;
 }
 
 .share-modal svg {
@@ -1654,6 +1683,15 @@ nav a.page-link {
 @media only screen and (max-width: 984px) {
     a.page-link {
         margin: auto 1em 1em 1em;
+    }
+
+    .newsletter > h3 {
+        font-size: 20px;
+        padding-top: 0.6em;
+    }
+
+    a.source-link {
+        font-size: 20px;
     }
 
 }
@@ -1879,20 +1917,6 @@ nav a.page-link {
 
     #opportunity-details h5.marker {
         margin-top: 10px;
-    }
-
-    u:hover ~ .tooltip {
-        opacity: 0;
-        visibility: hidden;
-    }
-    
-    .tooltip {
-        display: none;
-    }
-
-    .copy-link:hover ~ .tooltip {
-        opacity: 0;
-        visibility: hidden;
     }
 
     #opportunity-details {
@@ -2314,19 +2338,20 @@ nav a.page-link {
 
     /* ////////// MODALS ////////////// */
     #modal-window {
-        width: 95vw;
-        height: 85vh;
+        /* width: 95vw; */
+        /* height: 85vh; */
+        /* height: 90vh; */
     }
 
     embed#modal-window {
-        margin-top: 90px;
-        margin-bottom: 0;
+        /* margin-top: 90px;
+        margin-bottom: 0; */
     }
 
     #modal-exit-la {
         /* background-color: green; */
-        top: 65px;
-        right: 2vw;
+        /* top: 65px; */
+        /* right: 2vw; */
     }
     
 
@@ -2480,7 +2505,7 @@ nav a.page-link {
     }
 
     #home-link h3 {
-        font-size: 12px;
+        font-size: 14px;
     }
     
     .menu-arrow {
