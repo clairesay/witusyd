@@ -892,10 +892,10 @@ main#news-events-page {
 
 #events {
     grid-area: EventSliders;
-    overflow-x: auto;
+    /* overflow-x: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
 }
 
 #news-events-page h1:first-of-type {
@@ -903,23 +903,22 @@ main#news-events-page {
     grid-area: EventTitle;
 }
 
-#event-sliders {
+/* #event-sliders {
     width: 100%;
     height: auto;
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory; 
-}
+} */
 
-.event-card {
+/* .event-card {
     width: 600px;
-    /* Change this height to auto when we have a defined size for our event cards */
     height: 300px;
     flex-shrink: 0;
     scroll-snap-align: center;
     scroll-behavior: smooth;
     padding: 0 1em;
-}
+} */
 
 /* EVENT CARD SELECTIONS */
 
@@ -1677,6 +1676,67 @@ nav a.page-link {
     transition: all 0.2s ease-in-out;
 }
 
+/* ///////////////////////// NEW EVENT SLIDERS ///////////////////////////// */
+.event-slider {
+    /* position: relative; */
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    padding-bottom: 2em;
+}
+
+.event-slider::-webkit-scrollbar {
+    display: none;
+}
+
+.event-slider .slide {
+    /* width: 100%; */
+    min-width: 90%;
+    padding: 0 1px;
+    /* padding-bottom: 1em; */
+    scroll-snap-align: center;
+    transform-origin: center center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.event-slider img {
+    max-width: 95%;
+    height: auto;
+    height: 400px;
+    /* max-height: 400px; */
+    object-fit: cover;
+}
+
+.event-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.event-button {
+    margin: 0 0.5em;
+    width: 50px;
+    height: 10px;
+    /* padding-top: 1em; */
+    transform: scaleY(1);
+    transform-origin: center bottom;
+    background-color: #e7e7e7;
+    
+    transition: all 0.2s ease-in-out;
+}
+
+.event-button:hover {
+    cursor: pointer;
+    transform: scaleY(1.5);
+}
 
 /*/////////////////////////////////////////////////////// MEDIA QUERIES START HERE /////////////////////////////////////////////////////*/
 

@@ -9,7 +9,7 @@
         <!-- <link href="https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet"> -->
     </head>
 
-    <body id="home" onload="scrollSet()">
+    <body id="home">
         <!-- <header id="logo-container">
             <a href="../index.html" id="home-link">
                 <image id="wit-logo" src="../global-assets/wit-logo.png" alt="USYD Women in Technology Logo"></image>
@@ -56,9 +56,20 @@
             <a class="page-link" id="resources" href="../resources/resources.html">Resources<div></div></a>
         </nav>
         <main id="news-events-page" class="main-grid">
-            <h1><span>//</span>Events</h1>
+            <h1><span>//</span> Events</h1>
             <section id="events">
-                <div class="break"></div>
+
+                <article class="event-slider">
+                    <figure id="1" class="slide"><img src="event-cards/event-1.png"></figure>
+                    <figure id="2" class="slide"><img src="event-cards/event-2.png"></figure>
+                    <figure id="3" class="slide"><img src="event-cards/event-3.png"></figure>
+                </article>
+                
+                <div class="event-buttons">
+
+                </div>
+
+                <!-- <div class="break"></div>
                 <article id="event-sliders">
                     <img id="last-event" class="event-card" src="../global-assets/profile-placeholder.png">
                     <img id="next-event" class="event-card" src="../global-assets/profile-placeholder.png">
@@ -66,17 +77,7 @@
                     <img id="future-event2" class="event-card" src="../global-assets/profile-placeholder.png">
                     <img id="future-event3" class="event-card" src="../global-assets/profile-placeholder.png">
                 </article> 
-                <!-- <article> -->
-                    <!-- <a class="slide-link" href="#last-event">1</a>
-                    <a class="slide-link" href="#next-event">2</a>
-                    <a class="slide-link" href="#future-event1">3</a>
-                    <a class="slide-link" href="#future-event2">4</a>
-                    <a class="slide-link" href="#future-event3">5</a> -->
                     <form id="event-card-select">
-                        <!-- <label>
-                            <input type="radio" id="1" name="event-card-link" checked>
-                            <div class="radio-mark"></div>
-                        </label> -->
                         <label>
                             <input type="radio" id="1" name="event-card-link">
                             <div class="radio-mark"></div>
@@ -89,12 +90,8 @@
                             <input type="radio" id="3" name="event-card-link">
                             <div class="radio-mark"></div>
                         </label>
-                        <!-- <label>
-                            <input type="radio" id="5" name="event-card-link">
-                            <div class="radio-mark"></div>
-                        </label> -->
-                    </form>
-                <!-- </article> -->
+                    </form> -->
+
             </section>
 
             <section id="news-article-link-listing" class="global-article-link-listing main-grid">
