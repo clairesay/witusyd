@@ -343,9 +343,12 @@
     window.addEventListener('load', eventButtonFill, false);
     eventSlider.addEventListener('scroll', eventButtonFill, false);
 
+    var slideNumber;
+
     function eventButtonFill() {
       let eventButton = document.getElementsByClassName('event-button');
-      var slideNumber = Math.round(eventSlider.scrollLeft/slideWidth);
+      slideNumber = Math.round(eventSlider.scrollLeft/slideWidth);
+      console.log(eventSlider.scrollLeft/slideWidth)
       
       eventButton[slideNumber].style.backgroundColor = '#6d4ff8';
       for (var j = 0; j < slide.length; j ++) {
@@ -355,4 +358,20 @@
       }
     }
 
+    function resizeFunction(size) {
+      var slideImage = document.querySelectorAll('.event-slider img');
 
+      if (size.matches) { // If media query matches
+        for (var l = 0; l < slideImage.length; l ++) {
+          slideImage[l].setAttribute('src', 'event-cards/event-' + (l+1) + '-m.png')
+        }
+      } else {
+        for(var l = 0; l < slideImage.length; l ++) {
+          slideImage[l].setAttribute('src', 'event-cards/event-' + (l+1) + '.png')
+        }
+      }
+    }
+
+    var tablet = window.matchMedia("(max-width: 650px)")
+    resizeFunction(tablet) // Call listener function at run time
+    tablet.addListener(resizeFunction) // Attach listener function on state changes
