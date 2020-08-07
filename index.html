@@ -89,16 +89,25 @@
          <section id="story1">
              <h1>Our Sponsors</h1>
              <h3>A big part of our society is working with our sponsors and industry connections to provide networking, roles and opportunities for our members.</h3> 
+             <!-- <article style="display: flex;"><img src="./index/index-assets/logo.svg"><img src="./index/index-assets/logo.svg"><img src="./index/index-assets/logo.svg"></article> -->
             <section id="slider-wrapper">
                 <article class="slider">
                     <figure id="1" class="slide"><img src="./index/index-assets/logo.svg"></figure>
                     <figure id="2" class="slide"><img src="./index/index-assets/logo.svg"></figure>
                     <figure id="3" class="slide"><img src="./index/index-assets/logo.svg"></figure>
                 </article>
-                
-                <div class="slider-buttons">
-
-                </div>
+                <!-- <article class="slider-progress-button">
+                    <a class="previous" onclick="slideFunction(-1, 0)">
+                        <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M66 7L14 43.5L66 80" stroke="white" stroke-width="15"/>
+                        </svg>
+                    </a>
+                    <a class="next" onclick="slideFunction(1, 0)">
+                        <svg width="71" height="50" viewBox="0 0 71 87" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 7L57 43.5L5 80" stroke="white" stroke-width="15"/>
+                        </svg>                        
+                    </a>   
+                </article> -->
             </section>
             </section>
          <section id="story2">
@@ -254,8 +263,31 @@
     </body>
     <script src="global-files/script.js"></script>
     <script>
+        var slideFunctionBaseNumber = 0;
         var slider = document.getElementsByClassName('slider')[0];
-        var slide = document.getElementsByClassName('slide');
+        var slides = document.getElementsByClassName('slide');
+        var slide = slides[0];
+        // var slide = document.querySelectorAll('#story1 .slider img')[0];
+
+        function slideFunction(n, m) {
+            var slideWidth = slide.clientWidth;
+            slideFunctionBaseNumber += n;
+            if (n > 0) {
+                slider.scrollBy((slide.clientWidth), 0);
+            } else if (n < 0) {
+                slider.scrollBy((-slide.clientWidth), 0)
+            }
+
+            // if (slideFunctionBaseNumber > slides.length - 1) {
+            //     console.log('ye')
+            //     slider.scrollTo(0, 0);
+            //     slideFunctionBaseNumber = 0;
+            // } else if (slideFunctionBaseNumber  == 0) {
+            //     console.log('no')
+            // }
+            // console.log(slideFunctionBaseNumber);
+        }
+
         // for (var i = 0; i < slide.length + 1; i ++ ) {
         //     if (i < slide.length + 1) {
         //         setTimeout(function() {
@@ -276,6 +308,20 @@
             //     console.log('no')
             // }
         // }
+        function yourFunction(){
+            // do whatever you like here
+            console.log( slide.clientWidth*(slides.length-1));
+            console.log(slide.clientWidth)
+            // console.log(slider.scrollRight)
+            if (slider.scrollLeft > slide.clientWidth*(slides.length-2)) {
+                setTimeout(yourFunction, 3000);
+                slider.scrollTo(0 , 0);
+            } else {
+                setTimeout(yourFunction, 3000);
+                slider.scrollBy((slide.clientWidth), 0);
+            }
+        }
 
+        yourFunction();
     </script>
 </html>
