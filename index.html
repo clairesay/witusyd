@@ -89,7 +89,18 @@
          <section id="story1">
              <h1>Our Sponsors</h1>
              <h3>A big part of our society is working with our sponsors and industry connections to provide networking, roles and opportunities for our members.</h3> 
-         </section>
+            <section id="slider-wrapper">
+                <article class="slider">
+                    <figure id="1" class="slide"><img src="./index/index-assets/logo.svg"></figure>
+                    <figure id="2" class="slide"><img src="./index/index-assets/logo.svg"></figure>
+                    <figure id="3" class="slide"><img src="./index/index-assets/logo.svg"></figure>
+                </article>
+                
+                <div class="slider-buttons">
+
+                </div>
+            </section>
+            </section>
          <section id="story2">
              <h1>Our goals as a society</h1>
              <article>
@@ -107,9 +118,18 @@
                 </article>
              </article>
              <article id="goals">
-                 <h2>To achieve our goals, we focus on our five values:
+                 <h2>To achieve our goals, we focus on our five values:</h2>
                  </br>
-                  freedom, respect, community, growth and knowledge.</h2>
+                 <div>
+                    <figure><img src="index/index-assets/freedom.svg"><h3>Freedom</h3></figure>
+                    <figure><img src="index/index-assets/respect.svg"><h3>Respect</h3></figure>
+                    <figure><img src="index/index-assets/community.svg"><h3>Community</h3></figure>
+                    <figure><img src="index/index-assets/growth.svg"><h3>Growth</h3></figure>
+                    <figure><img src="index/index-assets/knowledge.svg"><h3>Knowledge</h3></figure>
+                 </div>
+                 <h5 class="attribution-text">Image attributions: Freepik, Noun Project</h5>
+                  <!-- freedom, respect, community, growth and knowledge.</h2> -->
+                  
              </article>
          </section>
          <section id="story3">
@@ -233,4 +253,29 @@
         </svg>
     </body>
     <script src="global-files/script.js"></script>
+    <script>
+        var slider = document.getElementsByClassName('slider')[0];
+        var slide = document.getElementsByClassName('slide');
+        // for (var i = 0; i < slide.length + 1; i ++ ) {
+        //     if (i < slide.length + 1) {
+        //         setTimeout(function() {
+        //             slider.scrollBy(1000, 0)
+        //         }, 500)
+        //     }
+        // }
+
+        // window.addEventListener('resize', eventButtonFill, false);
+        // window.addEventListener('load', scrollFunction, false);
+        // slider.addEventListener('scroll', scrollFunction, false);
+
+        // function scrollFunction() {
+            // if (slider.scrollLeft > (slide[0].clientWidth * 3 - 50)) {
+            //     console.log('ye')
+            // } else {
+            //     slider.scrollTo(slide[0].clientWidth,0);
+            //     console.log('no')
+            // }
+        // }
+
+    </script>
 </html>

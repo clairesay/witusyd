@@ -303,14 +303,14 @@
 
     // //////////////// NEW EVENT SLIDERS ///////////////////
 
-    const eventSlider = document.getElementsByClassName('event-slider')[0];
-    const eventButtons = document.getElementsByClassName('event-buttons')[0];
+    const eventSlider = document.getElementsByClassName('slider')[0];
+    const eventButtons = document.getElementsByClassName('slider-buttons')[0];
     var slide = document.getElementsByClassName('slide');
     var slideWidth = slide[0].clientWidth;
     var eventButton;
     for (var i = 1; i < slide.length + 1; i ++) {
       eventButton = document.createElement('a');
-      eventButton.setAttribute('class', 'event-button');
+      eventButton.setAttribute('class', 'slider-button');
       // eventButton.setAttribute('href', '#' + i);
       eventButton.setAttribute('onclick', 'scrollSlide(' + i +');')
       eventButtons.appendChild(eventButton);
@@ -346,9 +346,9 @@
     var slideNumber;
 
     function eventButtonFill() {
-      let eventButton = document.getElementsByClassName('event-button');
+      let eventButton = document.getElementsByClassName('slider-button');
       slideNumber = Math.round(eventSlider.scrollLeft/slideWidth);
-      console.log(eventSlider.scrollLeft/slideWidth)
+      // console.log(eventSlider.scrollLeft/slideWidth)
       
       eventButton[slideNumber].style.backgroundColor = '#6d4ff8';
       for (var j = 0; j < slide.length; j ++) {
@@ -359,7 +359,7 @@
     }
 
     function resizeFunction(size) {
-      var slideImage = document.querySelectorAll('.event-slider img');
+      var slideImage = document.querySelectorAll('.slider img');
 
       if (size.matches) { // If media query matches
         for (var l = 0; l < slideImage.length; l ++) {
