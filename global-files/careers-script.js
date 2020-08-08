@@ -2,7 +2,6 @@
 
  textToCopy.onclick = function() {
     document.execCommand("copy");
-    // console.log('ehehhehe');
   }
 
  textToCopy.addEventListener("copy", function(event) {
@@ -17,21 +16,5 @@
         }, 100);
 
       })
-      // if (textToCopy.addEventListener("mouseleave")) {
-      //   console.log('left');
-      //   document.getElementsByClassName('tooltip')[0].innerHTML = 'Click to Copy';
-      // }
-      // setTimeout(function() {
-        
-      // }, 2000);
     }
   });
-
-  // function iconCopyLink() {
-  //   console.log('workstothisextent');
-  //   // var copyText = ;
-  //   // copyText.select();
-  //   document.getElementById('yessir').select();
-  //   document.execCommand("copy");
-  //   alert("Copied the text: ");
-  // }

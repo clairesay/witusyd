@@ -41,7 +41,6 @@ document.getElementsByClassName('newsletter')[i].addEventListener('click', funct
     if (modalShowing == true) {
     document.addEventListener('click', function exitModal(evt) {
 
-        // var modalWindow = document.getElementById('modal-window');
         var targetElement = evt.target;
 
         if (targetElement == modalWindow) {
@@ -58,73 +57,6 @@ document.getElementsByClassName('newsletter')[i].addEventListener('click', funct
 
 });
 }
-
-// if (modalShowing == true) {
-    // console.log('NOWWN')
-
-// }
-
-// document.addEventListener("click", function(evt) {
-//     var flyoutElement = document.getElementById('flyout-example'),
-//         targetElement = evt.target;  // clicked element
-
-//     do {
-//         if (targetElement == flyoutElement) {
-//             // This is a click inside. Do nothing, just return.
-//             document.getElementById("flyout-debug").textContent = "Clicked inside!";
-//             return;
-//         }
-//         // Go up the DOM
-//         targetElement = targetElement.parentNode;
-//     } while (targetElement);
-
-//     // This is a click outside.
-//     document.getElementById("flyout-debug").textContent = "Clicked outside!";
-// });
-
-
-// for (let j = 0; j < 5; j ++) {
-//   document.getElementsByClassName('shar')[j].addEventListener('click', function displayShareModal() {
-  
-
-//     if (document.getElementsByClassName('share-modal')[j].classList.contains('invisi')) {
-//       console.log('yess')
-//       document.getElementsByClassName('share-modal')[j].style.display = "flex";
-//       document.getElementsByClassName('share-modal')[j].setAttribute('class', 'share-modal visi');
-
-//     } else if (document.getElementsByClassName('share-modal')[j].classList.contains('visi')) {
-//       console.log('nup')
-//       document.getElementsByClassName('share-modal')[j].setAttribute('class', 'share-modal invisi');
-//       setTimeout( animationWait, 200)
-//       function animationWait() {
-//         document.getElementsByClassName('share-modal')[j].style.display = "none"
-//     };
-//       // document.getElementsByClassName('share-modal')[j].style.display = "none";
-//       // document.getElementsByClassName('share-modal')[j].setAttribute('class', 'share-modal invisi');
-//     }
-//       for (let a = 0; a < 5; a ++) {
-//         if (a != j) {
-//           document.getElementsByClassName('share-modal')[a].setAttribute('class', 'share-modal invisi');
-//           setTimeout( animationWait, 200)
-//           function animationWait() {
-//             document.getElementsByClassName('share-modal')[a].style.display = "none"
-//           };
-//         } else {
-//           console.log('exited');
-//         }
-//       }
-    
-//   });
-// }
-
-
-// document.getElementsByClassName('share-modal')[j].setAttribute('class', 'share-modal invisi');
-// setTimeout( animationWait, 200)
-// function animationWait() {
-//   document.getElementsByClassName('share-modal')[j].style.display = "none"
-// };
-// document.getElementsByClassName('share-modal')[j].style.display = "flex";
-// document.getElementsByClassName('share-modal')[j].setAttribute('class', 'share-modal visi');
 
 //////////// text copy
 
@@ -151,6 +83,7 @@ for (let k = 0; k < 5; k ++) {
     break;
     default:
   }
+  
   shareLinkButton.addEventListener('click', function collectLink() {
     var dummyCopyText = document.createElement("textarea");
     document.body.appendChild(dummyCopyText);

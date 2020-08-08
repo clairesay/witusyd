@@ -17,6 +17,4 @@ function growDiv(i) {
       }
     }
     }
-
-
   }
