@@ -2,29 +2,29 @@ let modalShowing = false;
 const modalWindow = document.getElementById('modal-window');
 const modal = document.getElementById('modal');
 const home = document.getElementById('home');
-
-for (let i = 0; i < 5; i ++) {
-document.getElementsByClassName('newsletter')[i].addEventListener('click', function displayNewsletterModal() {
+var newsletter = document.getElementsByClassName('newsletter');
+for (let i = 0; i < newsletter.length; i ++) {
+newsletter[i].addEventListener('click', function displayNewsletterModal() {
 
     switch(i) {
         case 0:
-            modalWindow.setAttribute('src', '../newsletters/newsletters-assets/w5.pdf');
+            modalWindow.setAttribute('src', '../public/assets/newsletters/w5.pdf');
           // code block
           break;
         case 1:
-            modalWindow.setAttribute('src', '../newsletters/newsletters-assets/w4.pdf');
+            modalWindow.setAttribute('src', '../public/assets/newsletters/w4.pdf');
           // code block
           break;
         case 2:
-          modalWindow.setAttribute('src', '../newsletters/newsletters-assets/w3.pdf');
+          modalWindow.setAttribute('src', '../public/assets/newsletters/w3.pdf');
             // code block
           break;
         case 3:
-          modalWindow.setAttribute('src', '../newsletters/newsletters-assets/w2.pdf');
+          modalWindow.setAttribute('src', '../public/assets/newsletters/w2.pdf');
             // code block
           break;
         case 4:
-          modalWindow.setAttribute('src', '../newsletters/newsletters-assets/w1.pdf');
+          modalWindow.setAttribute('src', '../public/assets/newsletters/w1.pdf');
             // code block
           break;
         default:
@@ -61,25 +61,26 @@ document.getElementsByClassName('newsletter')[i].addEventListener('click', funct
 //////////// text copy
 
 
+var shareIcon = document.getElementsByClassName('share-icon');
 var textToCopy; 
-for (let k = 0; k < 5; k ++) {
-  document.getElementsByClassName('share-icon')[k].addEventListener('mouseover', function displayShareModal() {
+for (let k = 0; k < shareIcon.length; k ++) {
+  shareIcon[k].addEventListener('mouseover', function displayShareModal() {
     var shareLinkButton = document.getElementsByClassName('share-modal-hyperlink')[k];
     switch(k) {
     case 0:
-      textToCopy = "https://witusyd.com/newsletters/newsletters-assets/w5.pdf";
+      textToCopy = "https://witusyd.com/public/assets/newsletters/w5.pdf";
     break;
     case 1:
-     textToCopy = "https://witusyd.com/newsletters/newsletters-assets/w4.pdf";
+     textToCopy = "https://witusyd.com/public/assets/newsletters/w4.pdf";
     break;
     case 2:
-      textToCopy = "https://witusyd.com/newsletters/newsletters-assets/w3.pdf";
+      textToCopy = "https://witusyd.com/public/assets/newsletters/w3.pdf";
     break;
     case 3:
-       textToCopy = "https://witusyd.com/newsletters/newsletters-assets/w2.pdf";
+       textToCopy = "https://witusyd.com/public/assets/newsletters/w2.pdf";
     break;
     case 4:
-      textToCopy = "https://witusyd.com/newsletters/newsletters-assets/w1.pdf";
+      textToCopy = "https://witusyd.com/public/assets/newsletters/w1.pdf";
     break;
     default:
   }

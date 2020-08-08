@@ -1,9 +1,9 @@
     //////////// text copy
     
-    
+    var shareIcon = document.getElementsByClassName('share-icon');
     var textToCopy; 
-    for (let k = 0; k < 4; k ++) {
-      document.getElementsByClassName('share-icon')[k].addEventListener('mouseover', function displayShareModal() {
+    for (let k = 0; k < shareIcon.length; k ++) {
+      shareIcon[k].addEventListener('mouseover', function displayShareModal() {
         var shareLinkButton = document.getElementsByClassName('share-modal-hyperlink')[k];
         switch(k) {
         case 0:
@@ -87,11 +87,11 @@
 
       if (size.matches) { // If media query matches
         for (var l = 0; l < slideImage.length; l ++) {
-          slideImage[l].setAttribute('src', 'event-cards/event-' + (l+1) + '-m.png')
+          slideImage[l].setAttribute('src', '../public/assets/news-events/events-assets/event-' + (l+1) + '-m.png')
         }
       } else {
         for(var l = 0; l < slideImage.length; l ++) {
-          slideImage[l].setAttribute('src', 'event-cards/event-' + (l+1) + '.png')
+          slideImage[l].setAttribute('src', '../public/assets/news-events/events-assets/event-' + (l+1) + '.png')
         }
       }
     }

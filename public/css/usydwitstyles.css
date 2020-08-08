@@ -279,6 +279,9 @@ a#linkedin-link:hover > svg#linkedin {
     position: relative;
 }
 
+.resize {
+    transform: scale(2.39720558882);
+}
 
 .share-modal {
     visibility: hidden;

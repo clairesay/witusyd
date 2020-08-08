@@ -1,9 +1,10 @@
   //////////// text copy
   
   
+  var shareIcon = document.getElementsByClassName('share-icon');
   var textToCopy; 
-  for (let k = 0; k < 3; k ++) {
-    document.getElementsByClassName('share-icon')[k].addEventListener('mouseover', function displayShareModal() {
+  for (let k = 0; k < shareIcon.length; k ++) {
+    shareIcon[k].addEventListener('mouseover', function displayShareModal() {
       var shareLinkButton = document.getElementsByClassName('share-modal-hyperlink')[k];
       switch(k) {
       case 0:
