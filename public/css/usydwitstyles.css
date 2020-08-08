@@ -64,6 +64,12 @@ a {
     text-align: center;
 }
 
+a.external-link {
+    font-family: 'Oswald', sans-serif;
+    color: #6d4ff8;
+    text-align: left;
+}
+
 /* TAGS */
 body {
     max-width: 100vw;
@@ -559,7 +565,7 @@ main#half-width #story2 > article:first-of-type {
 
 #story2 article#story2-b {
     grid-area: Story2B;
-    padding: 1em 2em;
+    padding: 2em;
     width: 30%;
 }
 
