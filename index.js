@@ -11,8 +11,8 @@ const StoryblokClient = require('storyblok-js-client');
 // 2. Initialize the client
 // You can use this preview token for now, we'll change it later
 let Storyblok = new StoryblokClient({
-  accessToken: 'gh6t4aeLxwZyIZhhFdn8ywtt'
-});
+    accessToken: 'J0irYFbngEQ6ZFlRqs6llwtt'
+  });
 
 // 3. Define a wilcard route to get the story mathing the url path
 app.get('/*', function(req, res) {
@@ -39,12 +39,13 @@ app.use('/public', express.static('public'));
 app.engine('.hbs', exphbs({
   defaultLayout: 'main',
   extname: '.hbs',
-  partialsDir: 'views/components/'
+  partialsDir: 'views/components/',
 }));
 
 app.set('view engine', '.hbs');
 app.set('views', 'views')
 
-app.listen(4300, function() {
-  console.log('Example app listening on port 4300!');
+app.listen(8000, function() {
+  console.log('Example app listening on port 8000!');
 });
+
