@@ -11,7 +11,7 @@ const StoryblokClient = require('storyblok-js-client');
 // 2. Initialize the client
 // You can use this preview token for now, we'll change it later
 let Storyblok = new StoryblokClient({
-  accessToken: 'J0irYFbngEQ6ZFlRqs6llwtt'
+  accessToken: 'gh6t4aeLxwZyIZhhFdn8ywtt'
 });
 
 // 3. Define a wilcard route to get the story mathing the url path
